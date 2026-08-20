@@ -8,28 +8,29 @@
 <meta property="og:title" content="Re:che（リッシュ）公式オンラインパンフレット">
 <meta property="og:description" content="自立しよう、自分の足で立つと気持ちいい。在宅型サステナ物販スクールRe:cheの公式ガイドです。">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://kumiko0814.github.io/reche-pamphlet/img/hero-sea.jpg">
+<meta property="og:image" content="https://kumiko0814.github.io/reche-pamphlet/img/sec-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --blue-bg:#f1f7fb; --blue-bg2:#eaf3fa; --pink-bg:#fbeef1;
-  --navy:#26405f; --navy-deep:#1d3149;
-  --pink:#cf8f9c; --pink-deep:#bd7886;
-  --lblue:#7fb0d2; --ink:#4a4446; --line:#dfe7ee;
-  --grad:linear-gradient(90deg,#f3c3d3 0%,#d9c3ea 55%,#b9d5ee 100%);
+  --bg:#faf8f5; --bg2:#f4efe9; --pink-bg:#f8efee;
+  --ink:#4a4446; --charcoal:#3f393c; --charcoal-deep:#332e31;
+  --rose:#c08c98; --rose-deep:#a86673;
+  --taupe:#b3a396; --line:#e7e0d8;
+  --grad:linear-gradient(90deg,#e9c7d1 0%,#e6d6c9 55%,#dccaba 100%);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
   font-family:"Yu Gothic","YuGothic","Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
-  color:var(--ink); background:var(--blue-bg); line-height:2; font-size:15.5px;
+  color:var(--ink); background:var(--bg); line-height:2; font-size:15.5px;
   -webkit-font-smoothing:antialiased; overflow-x:hidden;
 }
 img{max-width:100%; display:block;}
-a{color:var(--pink-deep);}
+a{color:var(--rose-deep);}
 .en{font-family:"Cormorant Garamond","Yu Gothic",serif;}
+.serif{font-family:"Shippori Mincho","Yu Mincho",serif;}
 .wrap{max-width:1020px; margin:0 auto; padding:0 22px;}
 .mob{display:none;}
 @media(max-width:560px){ .mob{display:inline;} }
@@ -39,93 +40,60 @@ a{color:var(--pink-deep);}
 .rv.in{opacity:1; transform:none;}
 @media (prefers-reduced-motion: reduce){ .rv{opacity:1; transform:none; transition:none;} }
 
-/* header */
-header{position:sticky; top:0; z-index:50; background:rgba(241,247,251,.9); backdrop-filter:blur(12px); border-bottom:1px solid var(--line);}
-header::after{content:""; display:block; height:3px; background:var(--grad);}
-.hd{display:flex; align-items:center; justify-content:space-between; padding:12px 22px; max-width:1020px; margin:0 auto;}
-.hd .brand{display:flex; flex-direction:column; line-height:1.25;}
-.hd .brand .nm{font-size:21px; font-weight:900; color:var(--navy-deep); letter-spacing:.04em;}
-.hd .brand .sb{font-size:9.5px; letter-spacing:.22em; color:var(--lblue); font-weight:700;}
-.hd .op{display:flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--line); border-radius:999px; padding:6px 14px;}
-.hd .op span{font-size:10.5px; color:#8a97a5; font-weight:700; letter-spacing:.06em;}
-.hd .op img{height:20px; width:auto;}
-
-/* hero */
-.hero{position:relative; background:linear-gradient(160deg,#eaf3fa 0%,#f6fafc 45%,#fbeef1 130%); overflow:hidden; padding:70px 0 0;}
-.hero::before{content:""; position:absolute; right:-140px; top:-140px; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle,#fbeef1 0%,rgba(251,238,241,0) 70%);}
-.hero .wrap{display:grid; grid-template-columns:1.02fr .98fr; gap:44px; align-items:center; position:relative;}
-.kicker{display:inline-block; font-size:11px; letter-spacing:.3em; color:var(--pink-deep); font-weight:700; border-bottom:2px solid var(--pink); padding-bottom:6px; margin-bottom:20px;}
-.hero h1{font-size:15px; color:var(--navy); font-weight:700; letter-spacing:.12em; margin-bottom:4px; word-break:auto-phrase;}
-.hero .logo-line{font-size:66px; font-weight:900; color:var(--navy-deep); letter-spacing:.02em; line-height:1.12;}
-.hero .logo-line small{font-size:22px; color:var(--pink-deep); font-weight:700; letter-spacing:.08em;}
-.promise{margin-top:16px; font-size:21px; font-weight:900; color:var(--navy); letter-spacing:.06em; word-break:auto-phrase;}
-.promise .u{background:linear-gradient(transparent 70%,rgba(207,143,156,.35) 70%);}
-.promise .en-sub{display:block; font-size:11px; letter-spacing:.26em; color:var(--lblue); margin-top:6px; font-weight:700;}
-.hero p.lead{margin-top:16px; font-size:14.5px; word-break:auto-phrase;}
-.edition{margin-top:18px; font-size:11.5px; color:#8a97a5; letter-spacing:.05em;}
-.hero .art{position:relative;}
-.hero .art .sea{border-radius:200px 200px 28px 28px; overflow:hidden; box-shadow:0 30px 70px rgba(38,64,95,.22); border:6px solid #fff;}
-.hero .art .badge{position:absolute; left:-16px; bottom:26px; background:#fff; border-radius:16px; box-shadow:0 14px 36px rgba(38,64,95,.18); padding:12px 18px; font-size:12px; font-weight:900; color:var(--navy-deep); line-height:1.7;}
-.hero .art .badge small{display:block; color:var(--pink-deep); font-size:10px; letter-spacing:.14em; font-weight:700;}
-.stats{max-width:1020px; margin:44px auto 0; padding:0 22px 0;}
-.stats .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; transform:translateY(34px);}
-.stat{background:rgba(255,255,255,.94); border:1px solid var(--line); border-radius:18px; text-align:center; padding:20px 10px 16px; box-shadow:0 16px 40px rgba(38,64,95,.10); backdrop-filter:blur(4px);}
-.stat .lb{font-size:11px; color:#8a97a5; font-weight:700; letter-spacing:.08em;}
-.stat .vl{font-size:27px; font-weight:900; color:var(--navy-deep); line-height:1.3; margin-top:4px;}
-.stat .vl small{font-size:12.5px; font-weight:700; color:var(--pink-deep);}
-.hero-note{max-width:1020px; margin:0 auto; padding:48px 22px 0; font-size:10.5px; color:#a7b3bf;}
+/* デザインボード（支給デザイン画像・無加工） */
+.board{max-width:1240px; margin:0 auto; padding:0 10px;}
+.board img{width:100%;}
+.board.top{padding-top:14px;}
 
 /* sections */
-section{padding:78px 0;}
+section{padding:74px 0;}
 section.alt{background:#fff;}
 section.pinkbg{background:var(--pink-bg);}
-section.navybg{background:var(--navy-deep); color:#e8eef5;}
+section.darkbg{background:var(--charcoal-deep); color:#efe9e4;}
 .sec-head{margin-bottom:40px;}
-.sec-head .en-ov{font-size:12px; letter-spacing:.3em; color:var(--pink-deep); font-weight:700; display:block; margin-bottom:8px;}
-.navybg .sec-head .en-ov{color:var(--pink);}
-.sec-head h2{font-size:30px; font-weight:900; color:var(--navy-deep); letter-spacing:.05em; line-height:1.6; word-break:auto-phrase;}
-.navybg .sec-head h2{color:#fff;}
-.sec-head h2 .u{background:linear-gradient(transparent 68%,rgba(207,143,156,.35) 68%);}
+.sec-head .en-ov{font-size:12px; letter-spacing:.3em; color:var(--rose-deep); font-weight:700; display:block; margin-bottom:8px;}
+.darkbg .sec-head .en-ov{color:var(--rose);}
+.sec-head h2{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:30px; font-weight:700; color:var(--charcoal-deep); letter-spacing:.05em; line-height:1.7; word-break:auto-phrase;}
+.darkbg .sec-head h2{color:#fff;}
+.sec-head h2 .u{background:linear-gradient(transparent 70%,rgba(192,140,152,.32) 70%);}
 .sec-head p.sub{margin-top:12px; font-size:14.5px; word-break:auto-phrase; max-width:760px;}
-.navybg .sec-head p.sub{color:#c6d3e2;}
+.darkbg .sec-head p.sub{color:#d6cdc7;}
 .hairline{height:3px; background:var(--grad); border-radius:99px; width:76px; margin-top:16px;}
 
 .cards{display:grid; gap:16px;}
 .cards.c2{grid-template-columns:1fr 1fr;}
 .cards.c3{grid-template-columns:repeat(3,1fr);}
 .card{background:#fff; border:1px solid var(--line); border-radius:20px; padding:24px 22px;}
-.pinkbg .card, .pinkbg .voice{border-color:#f2dde2;}
-.card h3{font-size:16.5px; color:var(--navy); font-weight:900; margin-bottom:8px; letter-spacing:.04em; word-break:auto-phrase;}
+.pinkbg .card, .pinkbg .frame{border-color:#eedede;}
+.card h3{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:17px; color:var(--charcoal); font-weight:700; margin-bottom:8px; letter-spacing:.04em; word-break:auto-phrase;}
 .card p{font-size:13.8px; line-height:1.95; word-break:auto-phrase;}
-.card .tag{display:inline-block; font-size:10px; font-weight:900; letter-spacing:.12em; color:#fff; background:linear-gradient(135deg,var(--pink),var(--pink-deep)); border-radius:999px; padding:3px 12px; margin-bottom:10px;}
-.card .tag.bl{background:linear-gradient(135deg,#9cc3de,var(--lblue));}
+.card .tag{display:inline-block; font-size:10px; font-weight:900; letter-spacing:.12em; color:#fff; background:linear-gradient(135deg,var(--rose),var(--rose-deep)); border-radius:999px; padding:3px 12px; margin-bottom:10px;}
+.card .tag.bl{background:linear-gradient(135deg,#c9bbae,var(--taupe));}
 .card .cimg{border-radius:14px; overflow:hidden; margin:12px 0 4px; border:1px solid var(--line);}
 
 /* photo frames */
-.frame{background:#fff; border-radius:22px; padding:12px; box-shadow:0 18px 46px rgba(38,64,95,.13); border:1px solid var(--line);}
+.frame{background:#fff; border-radius:22px; padding:12px; box-shadow:0 18px 46px rgba(63,57,60,.10); border:1px solid var(--line);}
 .frame img{border-radius:14px;}
-.frame .cap{font-size:11.5px; color:#8a97a5; font-weight:700; letter-spacing:.06em; padding:10px 6px 2px; text-align:center; word-break:auto-phrase;}
-.tilt-l{transform:rotate(-1.6deg);}
-.tilt-r{transform:rotate(1.4deg);}
+.frame .cap{font-size:11.5px; color:#9a9089; font-weight:700; letter-spacing:.06em; padding:10px 6px 2px; text-align:center; word-break:auto-phrase;}
 
 .split{display:grid; grid-template-columns:1fr 1fr; gap:34px; align-items:center;}
-.split .txt h3{font-size:21px; font-weight:900; color:var(--navy-deep); line-height:1.8; margin-bottom:10px; word-break:auto-phrase;}
-.split .txt h3 .u{background:linear-gradient(transparent 68%,rgba(207,143,156,.35) 68%);}
+.split .txt h3{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:21px; font-weight:700; color:var(--charcoal-deep); line-height:1.9; margin-bottom:10px; word-break:auto-phrase;}
+.split .txt h3 .u{background:linear-gradient(transparent 70%,rgba(192,140,152,.32) 70%);}
 .split .txt p{font-size:14px; word-break:auto-phrase;}
 
 .tblwrap{overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:18px; border:1px solid var(--line); background:#fff;}
 table{width:100%; border-collapse:collapse; min-width:560px; font-size:13.5px;}
 th,td{padding:14px 16px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.8;}
-thead th{background:var(--navy); color:#fff; font-size:12.5px; letter-spacing:.08em; border-bottom:none;}
-thead th.hl{background:var(--pink-deep);}
+thead th{background:var(--charcoal); color:#fff; font-size:12.5px; letter-spacing:.08em; border-bottom:none;}
+thead th.hl{background:var(--rose-deep);}
 tbody tr:last-child td{border-bottom:none;}
-td.hl{background:#fdf6f8; font-weight:700; color:var(--navy-deep);}
-td.rowlb,th.rowlb{font-weight:900; color:var(--navy); white-space:nowrap; background:var(--blue-bg);}
+td.hl{background:#faf3f4; font-weight:700; color:var(--charcoal-deep);}
+td.rowlb,th.rowlb{font-weight:900; color:var(--charcoal); white-space:nowrap; background:var(--bg2);}
 
 .flow{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:8px;}
 .flow .f{background:#fff; border:1px solid var(--line); border-radius:18px; padding:20px 18px; position:relative;}
-.flow .f .no{font-size:26px; font-weight:600; color:var(--pink); line-height:1;}
-.flow .f h4{font-size:15px; color:var(--navy-deep); font-weight:900; margin:8px 0 6px; word-break:auto-phrase;}
+.flow .f .no{font-size:26px; font-weight:600; color:var(--rose); line-height:1; font-family:"Cormorant Garamond",serif;}
+.flow .f h4{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:15.5px; color:var(--charcoal-deep); font-weight:700; margin:8px 0 6px; word-break:auto-phrase;}
 .flow .f p{font-size:12.8px; line-height:1.9; word-break:auto-phrase;}
 
 .gallery{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:26px; align-items:start;}
@@ -133,13 +101,13 @@ td.rowlb,th.rowlb{font-weight:900; color:var(--navy); white-space:nowrap; backgr
 .strip{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px; align-items:start;}
 
 .club{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
-.club .cl{background:#fff; border:1px solid var(--line); border-radius:14px; padding:12px 16px; font-size:13px; font-weight:700; color:var(--navy); display:flex; gap:10px; align-items:baseline; word-break:auto-phrase;}
-.club .cl span{font-size:10.5px; color:var(--pink-deep); font-weight:900; white-space:nowrap;}
+.club .cl{background:#fff; border:1px solid var(--line); border-radius:14px; padding:12px 16px; font-size:13px; font-weight:700; color:var(--charcoal); display:flex; gap:10px; align-items:baseline; word-break:auto-phrase;}
+.club .cl span{font-size:10.5px; color:var(--rose-deep); font-weight:900; white-space:nowrap;}
 
 .medlist{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
 .medlist .m{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:14px; padding:14px 18px; font-size:13px; line-height:1.8; word-break:auto-phrase;}
 .medlist .m b{color:#fff; display:block; font-size:13.5px;}
-.medlist .m span{color:#9fb2c8; font-size:11.5px;}
+.medlist .m span{color:#b5a9a1; font-size:11.5px;}
 
 .masonry{columns:3; column-gap:14px; margin-top:26px;}
 .masonry .frame{margin:0 0 14px; break-inside:avoid; padding:8px;}
@@ -149,41 +117,35 @@ td.rowlb,th.rowlb{font-weight:900; color:var(--navy); white-space:nowrap; backgr
 .msg .ph{min-height:100%;}
 .msg .ph img{width:100%; height:100%; object-fit:cover;}
 .msg .bd{padding:36px 32px;}
-.msg .q{font-size:19px; font-weight:900; color:var(--navy-deep); line-height:2; margin-bottom:16px; word-break:auto-phrase;}
-.msg .q .u{background:linear-gradient(transparent 68%,rgba(207,143,156,.35) 68%);}
+.msg .q{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:19px; font-weight:700; color:var(--charcoal-deep); line-height:2; margin-bottom:16px; word-break:auto-phrase;}
+.msg .q .u{background:linear-gradient(transparent 70%,rgba(192,140,152,.32) 70%);}
 .msg p{font-size:13.8px; margin-bottom:12px; word-break:auto-phrase;}
-.msg .sign{text-align:right; font-size:13px; font-weight:900; color:var(--navy); margin-top:18px;}
-.msg .sign small{display:block; font-weight:700; color:#8a97a5; font-size:11px; letter-spacing:.08em;}
+.msg .sign{text-align:right; font-size:13px; font-weight:900; color:var(--charcoal); margin-top:18px;}
+.msg .sign small{display:block; font-weight:700; color:#9a9089; font-size:11px; letter-spacing:.08em;}
 
-.cta{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%); border-radius:26px; padding:46px 34px; text-align:center; color:#fff; position:relative; overflow:hidden;}
-.cta::before{content:""; position:absolute; inset:auto -60px -120px auto; width:280px; height:280px; border-radius:50%; background:radial-gradient(circle,rgba(207,143,156,.35),transparent 70%);}
-.cta h3{font-size:22px; font-weight:900; letter-spacing:.06em; line-height:1.8; word-break:auto-phrase; position:relative;}
-.cta p{font-size:13.5px; color:#c6d3e2; margin-top:10px; word-break:auto-phrase; position:relative;}
+.cta{background:linear-gradient(135deg,var(--charcoal) 0%,var(--charcoal-deep) 100%); border-radius:26px; padding:46px 34px; text-align:center; color:#fff; position:relative; overflow:hidden;}
+.cta::before{content:""; position:absolute; inset:auto -60px -120px auto; width:280px; height:280px; border-radius:50%; background:radial-gradient(circle,rgba(192,140,152,.35),transparent 70%);}
+.cta h3{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:22px; font-weight:700; letter-spacing:.06em; line-height:1.8; word-break:auto-phrase; position:relative;}
+.cta p{font-size:13.5px; color:#d6cdc7; margin-top:10px; word-break:auto-phrase; position:relative;}
 .cta .btns{display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap; position:relative;}
 .cta a.bt{display:inline-block; text-decoration:none; font-weight:900; font-size:14px; border-radius:999px; padding:14px 32px; letter-spacing:.04em;}
-.cta a.p{background:linear-gradient(135deg,var(--pink),var(--pink-deep)); color:#fff;}
-.cta a.w{background:#fff; color:var(--navy-deep);}
+.cta a.p{background:linear-gradient(135deg,var(--rose),var(--rose-deep)); color:#fff;}
+.cta a.w{background:#fff; color:var(--charcoal-deep);}
 
 .links{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:26px;}
 .links a{display:block; text-decoration:none; background:#fff; border:1px solid var(--line); border-radius:18px; padding:20px 22px; transition:box-shadow .2s;}
-.links a:hover{box-shadow:0 10px 30px rgba(38,64,95,.10);}
-.links b{color:var(--navy-deep); font-size:14.5px; display:block;}
-.links span{font-size:12px; color:#8a97a5;}
+.links a:hover{box-shadow:0 10px 30px rgba(63,57,60,.10);}
+.links b{color:var(--charcoal-deep); font-size:14.5px; display:block;}
+.links span{font-size:12px; color:#9a9089;}
 
-footer{background:var(--navy-deep); color:#9fb2c8; padding:40px 0 110px; font-size:12px;}
+footer{background:var(--charcoal-deep); color:#b5a9a1; padding:40px 0 110px; font-size:12px;}
 footer .fx{display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;}
-footer .co{color:#fff; font-weight:900; font-size:14px; letter-spacing:.06em;}
-footer a{color:#c6d3e2;}
-.smallnote{font-size:10.5px; color:#a7b3bf; margin-top:14px; line-height:1.8;}
-.navybg .smallnote{color:#8195ac;}
+footer .co{color:#fff; font-weight:900; font-size:14px; letter-spacing:.06em; font-family:"Shippori Mincho",serif;}
+footer a{color:#d6cdc7;}
+.smallnote{font-size:10.5px; color:#aca29b; margin-top:14px; line-height:1.8;}
+.darkbg .smallnote{color:#948a84;}
 
 @media(max-width:880px){
-  .hero{padding-top:52px;}
-  .hero .wrap{grid-template-columns:1fr;}
-  .hero .logo-line{font-size:46px;}
-  .hero .art .sea{border-radius:120px 120px 22px 22px;}
-  .stats .grid{grid-template-columns:1fr 1fr; transform:translateY(0); margin-top:30px;}
-  .hero-note{padding-top:14px;}
   .cards.c2,.cards.c3{grid-template-columns:1fr;}
   .flow{grid-template-columns:1fr;}
   .club{grid-template-columns:1fr;}
@@ -195,75 +157,36 @@ footer a{color:#c6d3e2;}
   .masonry{columns:2;}
   .msg{grid-template-columns:1fr;}
   .msg .ph img{max-height:340px;}
-  section{padding:58px 0;}
+  section{padding:56px 0;}
   .sec-head h2{font-size:23px;}
   body{font-size:14.5px;}
-  .tilt-l,.tilt-r{transform:none;}
 }
 @media(max-width:520px){ .masonry{columns:1;} }
 
 /* bug report tool */
-#bugL{position:fixed; left:12px; bottom:16px; z-index:59; background:rgba(255,255,255,.92); border:1px solid var(--line); color:#8a97a5; font-size:10.5px; font-weight:800; border-radius:999px; padding:5px 12px; cursor:pointer; letter-spacing:.04em;}
-#bugM{position:fixed; inset:0; background:rgba(29,49,73,.55); display:none; align-items:center; justify-content:center; z-index:70; padding:24px;}
+#bugL{position:fixed; left:12px; bottom:16px; z-index:59; background:rgba(255,255,255,.92); border:1px solid var(--line); color:#9a9089; font-size:10.5px; font-weight:800; border-radius:999px; padding:5px 12px; cursor:pointer; letter-spacing:.04em;}
+#bugM{position:fixed; inset:0; background:rgba(51,46,49,.55); display:none; align-items:center; justify-content:center; z-index:70; padding:24px;}
 #bugM.on{display:flex;}
 #bugM .bx{background:#fff; border-radius:20px; padding:22px 20px; max-width:360px; width:100%;}
-#bugM h3{font-size:14.5px; color:var(--navy-deep); margin-bottom:8px;}
-#bugM textarea{width:100%; border:1.5px solid #e3e9f0; border-radius:12px; padding:11px 13px; font-size:14px; line-height:1.8; color:var(--navy-deep); font-family:inherit; min-height:100px; resize:vertical;}
+#bugM h3{font-size:14.5px; color:var(--charcoal-deep); margin-bottom:8px;}
+#bugM textarea{width:100%; border:1.5px solid #eae3db; border-radius:12px; padding:11px 13px; font-size:14px; line-height:1.8; color:var(--charcoal-deep); font-family:inherit; min-height:100px; resize:vertical;}
 #bugM .bb{display:flex; gap:8px; margin-top:12px;}
 #bugM button{flex:1; border:none; border-radius:999px; padding:11px; font-size:13px; font-weight:800; cursor:pointer; font-family:inherit;}
-#bugM .s{background:linear-gradient(135deg,#c76e85,var(--pink)); color:#fff;}
-#bugM .c{background:#eef2f6; color:var(--navy);}
-#bugM .done{display:none; font-size:12.5px; color:var(--pink-deep); font-weight:800; margin-top:8px; text-align:center;}
+#bugM .s{background:linear-gradient(135deg,#b5798a,var(--rose)); color:#fff;}
+#bugM .c{background:#f2ede7; color:var(--charcoal);}
+#bugM .done{display:none; font-size:12.5px; color:var(--rose-deep); font-weight:800; margin-top:8px; text-align:center;}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="hd">
-    <div class="brand">
-      <span class="nm">Re:che</span>
-      <span class="sb">ZAITAKU SUSTAINABLE RESELLING SCHOOL</span>
-    </div>
-    <div class="op"><span>運営</span><img src="img/merone-logo.png" alt="Merone"></div>
-  </div>
-</header>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="wrap">
-    <div>
-      <span class="kicker en">OFFICIAL ONLINE PAMPHLET</span>
-      <h1>在宅型サステナ物販スクール</h1>
-      <div class="logo-line">Re:che <small>リッシュ</small></div>
-      <div class="promise">
-        <span class="u">自立しよう、</span><br class="mob"><span class="u">自分の足で立つと気持ちいい</span>
-        <span class="en-sub en">BRAND PROMISE</span>
-      </div>
-      <p class="lead">
-        企業から届く、まだまだきれいなリユース品を、<br class="mob">おうちで再販売する。<br>
-        売れる商品を探し回る必要はありません。<br class="mob">検品済みのお品が、あなたのもとに届きます。<br>
-        Re:cheは、女性の精神的・経済的自立を支える<br class="mob">国内最大規模の在宅型サステナ物販スクールです。
-      </p>
-      <div class="edition">発行：株式会社Merone｜2026年8月改訂版（2021年8月発行版を全面更新）</div>
-    </div>
-    <div class="art">
-      <div class="sea"><img src="img/hero-sea.jpg" alt="海辺で両手を広げる女性"></div>
-      <div class="badge"><small>SINCE 2016</small>わたしは、昨日の「私」より<br>自由で強い</div>
-    </div>
-  </div>
-  <div class="stats">
-    <div class="grid">
-      <div class="stat"><div class="lb">創立</div><div class="vl">2016<small> 年</small></div></div>
-      <div class="stat"><div class="lb">総生徒数</div><div class="vl">2,200<small> 名超</small></div></div>
-      <div class="stat"><div class="lb">生徒の平均利益</div><div class="vl">月12.8<small> 万円</small></div></div>
-      <div class="stat"><div class="lb">平均作業時間</div><div class="vl">週3〜6<small> 時間</small></div></div>
-    </div>
-  </div>
-  <div class="hero-note">※数値はいずれもスクール実績値です。成果を保証するものではありません。</div>
+<!-- HERO（支給デザイン） -->
+<div class="board top">
+  <img src="img/sec-hero.jpg" alt="Re:che（リッシュ）在宅型サステナ物販スクール 公式オンラインパンフレット。自立しよう、自分の足で立つと気持ちいい。創立2016年・総生徒数2,200名超・生徒の平均利益 月12.8万円・平均作業時間 週3〜6時間">
 </div>
+<div class="wrap"><p class="smallnote" style="text-align:right;">発行：株式会社Merone｜2026年8月改訂版　※数値はスクール実績値です。成果を保証するものではありません。</p></div>
 
 <!-- ABOUT -->
-<section class="alt">
+<section class="alt" style="margin-top:44px;">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="en-ov en">ABOUT RE:CHE</span>
@@ -272,9 +195,9 @@ footer a{color:#c6d3e2;}
       <p class="sub">Re:cheが教えるのは、安く買って高く売るテクニックではありません。廃棄されるはずだった企業の過剰在庫やリユース品に、もう一度価値を吹き込んで社会に届ける「Re:seller（リセラー）」という働き方です。</p>
     </div>
     <div class="flow rv">
-      <div class="f"><div class="no en">01</div><h4>企業にうれしい</h4><p>アパレルメーカーやリユース企業の「まだきれいなのに行き場のないお品」をお預かりし、廃棄率を下げるお手伝いをします。</p></div>
-      <div class="f"><div class="no en">02</div><h4>わたしにうれしい</h4><p>検品済みのお品がおうちに届くので、撮影・出品・発送まで完全在宅。すきま時間で、自分の力で収入をつくれます。</p></div>
-      <div class="f"><div class="no en">03</div><h4>社会にうれしい</h4><p>アパレル業界の廃棄問題の解決に貢献。売れば売るほど社会貢献になる、胸を張れるお仕事です。</p></div>
+      <div class="f"><div class="no">01</div><h4>企業にうれしい</h4><p>アパレルメーカーやリユース企業の「まだきれいなのに行き場のないお品」をお預かりし、廃棄率を下げるお手伝いをします。</p></div>
+      <div class="f"><div class="no">02</div><h4>わたしにうれしい</h4><p>検品済みのお品がおうちに届くので、撮影・出品・発送まで完全在宅。すきま時間で、自分の力で収入をつくれます。</p></div>
+      <div class="f"><div class="no">03</div><h4>社会にうれしい</h4><p>アパレル業界の廃棄問題の解決に貢献。売れば売るほど社会貢献になる、胸を張れるお仕事です。</p></div>
     </div>
     <div class="split rv" style="margin-top:44px;">
       <div class="frame"><img src="img/ill-closet.jpg" alt="家の不用品が、別の人から見たら宝物に見えるイラスト" loading="lazy"><div class="cap">自分にとっては不要でも、別の人から見たら宝物</div></div>
@@ -283,36 +206,20 @@ footer a{color:#c6d3e2;}
         <p>同じものでも、自分にとっては不要だったとしても、別の人から見たら宝物に見えます。Re:cheではまず、おうちの不用品の販売からスタート。多くの受講生さんが、最初の1〜2ヶ月は不用品の販売だけで受講料をカバーしています。</p>
       </div>
     </div>
-    <div style="margin-top:44px;" class="rv">
-      <div class="tblwrap">
-        <table>
-          <thead><tr><th style="width:28%"></th><th>一般的な物販</th><th class="hl">Re:che</th></tr></thead>
-          <tbody>
-            <tr><td class="rowlb">利益率</td><td>10〜30％</td><td class="hl">50％以上</td></tr>
-            <tr><td class="rowlb">扱う商品</td><td>新品商品（価格競争になりやすい）</td><td class="hl">検証済みの中古品・一点もの（自分でお品の相場をつくれる）</td></tr>
-            <tr><td class="rowlb">商品の探し方</td><td>自分で商品を探し、仕入れ先も自分で開拓</td><td class="hl">独占提携の卸から検品済みのお品が届く</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="smallnote">※利益率はスクール実績にもとづく代表値です。</p>
-    </div>
   </div>
 </section>
 
-<!-- こんなのも売れます -->
-<section class="pinkbg">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="en-ov en">SURPRISING SALES</span>
-      <h2>ハーゲンダッツの蓋も、<br class="mob"><span class="u">松ぼっくりも売れる</span>世界</h2>
-      <div class="hairline"></div>
-      <p class="sub">「わたしに売れるものなんてあるのかな」と思っていた方ほど、驚く世界です。アイスの蓋64個が1,680円、松ぼっくり26個が1,600円、玉ねぎの皮が2,000円。視点が変われば、身のまわりのすべてがお品に見えてきます。</p>
-    </div>
-    <div class="gallery">
-      <div class="frame wide tilt-l rv"><img src="img/fun-items1.jpg" alt="ハーゲンダッツの蓋64個1,680円、松ぼっくり26個1,600円、キーホルダー21,000円の販売実例" loading="lazy"><div class="cap">実際に売れたお品たち（ハーゲンダッツの蓋・松ぼっくり・キーホルダー）</div></div>
-      <div class="frame tilt-r rv"><img src="img/fun-items2.jpg" alt="玉ねぎの皮2,000円、ニットワンピース4,799円の販売実例" loading="lazy"><div class="cap">玉ねぎの皮も、着なくなったワンピースも</div></div>
-      <div class="frame rv"><img src="img/surprise-cards.jpg" alt="AirPodsなどが入った大人気サプライズボックスの販売実例" loading="lazy"><div class="cap">大人気サプライズボックス（見込み利益3〜5万円）</div></div>
-    </div>
+<!-- 選ばれる理由（支給デザイン） -->
+<section style="padding:64px 0;">
+  <div class="board rv">
+    <img src="img/sec-reason.jpg" alt="Re:cheが選ばれる理由の比較表。利益率は一般的な物販が10〜30％のところRe:cheは50％以上。扱う商品は検証済みの中古品・一点もの。商品は独占提携の卸から検品済みで届く" loading="lazy">
+  </div>
+</section>
+
+<!-- こんなのも売れます（支給デザイン） -->
+<section class="alt" style="padding:64px 0;">
+  <div class="board rv">
+    <img src="img/sec-surprise.jpg" alt="ハーゲンダッツの蓋64個が1,680円、松ぼっくり26個が1,600円、玉ねぎの皮が2,000円で売れた実例。あなたの「これ、売れるかも！」を見つけるお手伝いをします" loading="lazy">
   </div>
 </section>
 
@@ -357,12 +264,15 @@ footer a{color:#c6d3e2;}
         <p>仕入れは24時間受付のオンラインフォームと、古物市場・現地仕入れ会の2タイプ。おうち中心の方も、実物を見て学びたい方も、自分のペースで選べます。</p>
       </div>
     </div>
+  </div>
 
-    <div class="sec-head rv" style="margin:56px 0 8px;">
-      <h2 style="font-size:22px;">実際のお品を、<span class="u">少しだけお見せします</span></h2>
-    </div>
+  <!-- 利益額をあげるお品たち（支給デザイン） -->
+  <div class="board rv" style="margin-top:56px;">
+    <img src="img/sec-goods.jpg" alt="利益額をあげるお品たち。仕入れ280円のネックレスが利益8,510円に。ナイロンバッグ利益11,950円、ブレスレット利益49,350円、ネックレス利益18,310円など" loading="lazy">
+  </div>
+
+  <div class="wrap">
     <div class="gallery">
-      <div class="frame wide rv"><img src="img/goods-profit.jpg" alt="利益11,950円・8,510円・49,350円・18,310円のブランド品実例" loading="lazy"><div class="cap">利益額をあげるお品たち（仕入れ280円のネックレスが利益8,510円に）</div></div>
       <div class="frame rv"><img src="img/goods-apparel.jpg" alt="アパレル仕入れパックの実例（1着280円〜）" loading="lazy"><div class="cap">アパレルパック（1着280円〜・回転率をあげるならこれ）</div></div>
       <div class="frame rv"><img src="img/goods-brand.jpg" alt="ブランドバッグ・財布の仕入れ実例" loading="lazy"><div class="cap">ブランド品パック（5万円〜）</div></div>
       <div class="frame rv"><img src="img/goods-brand2.jpg" alt="Tiffany&Co.、CHANEL、GUCCIなど取扱ブランドの実例" loading="lazy"><div class="cap">こんな商品を販売します（Tiffany・CHANEL・GUCCIなど）</div></div>
@@ -561,7 +471,7 @@ footer a{color:#c6d3e2;}
 </section>
 
 <!-- メディア -->
-<section class="navybg">
+<section class="darkbg">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="en-ov en">MEDIA &amp; TRUST</span>
@@ -594,13 +504,13 @@ footer a{color:#c6d3e2;}
       <div class="card">
         <img src="img/merone-logo.png" alt="株式会社Merone" style="height:34px; width:auto; margin-bottom:14px;">
         <p>株式会社Meroneは「自身を信じ愛する力を育て、女性の自己実現を創出する」をミッションに、女性支援事業を多岐にわたり展開しています。Re:cheはその創業事業として、女性の社会貢献を創出し、一人ひとりの働き方を支援しています。</p>
-        <p style="margin-top:10px; font-size:12.5px; color:#8a97a5;">Mission｜自身を信じ愛する力を育て、女性の自己実現を創出する<br>Vision｜人生の理想を追求する<br>Value｜与える人で在る／素直・誠実・僻まない／行動・思考の基準値を上げる／感謝を忘れない</p>
+        <p style="margin-top:10px; font-size:12.5px; color:#9a9089;">Mission｜自身を信じ愛する力を育て、女性の自己実現を創出する<br>Vision｜人生の理想を追求する<br>Value｜与える人で在る／素直・誠実・僻まない／行動・思考の基準値を上げる／感謝を忘れない</p>
       </div>
       <div class="card">
         <h3>グループサービス</h3>
-        <p><b style="color:var(--navy);">ママズスマイル</b>｜「託児に理由も罪悪感もいらない」がコンセプトの一時預かり託児店舗（東京・高田馬場）。Re:che生は特別価格で利用できます。</p>
-        <p style="margin-top:8px;"><b style="color:var(--navy);">nomama</b>｜社内独自のノウハウを活用したDX人材スクール。どんな場所でも通用する人材への教育を提供しています。</p>
-        <p style="margin-top:8px;"><b style="color:var(--navy);">スクール運営支援</b>｜累計40社を超えるスクール支援の実績があります。</p>
+        <p><b style="color:var(--charcoal);">ママズスマイル</b>｜「託児に理由も罪悪感もいらない」がコンセプトの一時預かり託児店舗（東京・高田馬場）。Re:che生は特別価格で利用できます。</p>
+        <p style="margin-top:8px;"><b style="color:var(--charcoal);">nomama</b>｜社内独自のノウハウを活用したDX人材スクール。どんな場所でも通用する人材への教育を提供しています。</p>
+        <p style="margin-top:8px;"><b style="color:var(--charcoal);">スクール運営支援</b>｜累計40社を超えるスクール支援の実績があります。</p>
       </div>
     </div>
     <div class="msg rv">
@@ -639,7 +549,7 @@ footer a{color:#c6d3e2;}
       <div class="co">Re:che｜在宅型サステナ物販スクール</div>
       <div>運営：株式会社Merone｜<a href="https://merone.jp" target="_blank" rel="noopener">merone.jp</a></div>
     </div>
-    <p class="smallnote" style="color:#8195ac;">本パンフレットの記載内容は2026年8月時点の情報です。実績値は在籍生アンケート等にもとづくものであり、成果を保証するものではありません。掲載内容の無断転載はご遠慮ください。<br>© Merone Inc. All Rights Reserved.</p>
+    <p class="smallnote">本パンフレットの記載内容は2026年8月時点の情報です。実績値は在籍生アンケート等にもとづくものであり、成果を保証するものではありません。掲載内容の無断転載はご遠慮ください。<br>© Merone Inc. All Rights Reserved.</p>
   </div>
 </footer>
 
@@ -671,7 +581,6 @@ document.getElementById("bugS").onclick=function(){
     body:JSON.stringify({member_id:"bug_reche-pamphlet",member_name:"Re:cheパンフレット",mood:"バグ報告",worry:t,want:location.href.slice(0,180)+" ／ "+navigator.userAgent.slice(0,140)})})
     .then(function(){ done(); }).catch(function(){ btn.disabled=false; alert("送信できませんでした。通信環境をご確認ください。"); });
 };
-// scroll reveal
 if("IntersectionObserver" in window){
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
