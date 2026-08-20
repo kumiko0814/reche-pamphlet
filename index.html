@@ -8,6 +8,7 @@
 <meta property="og:title" content="Re:che（リッシュ）公式オンラインパンフレット">
 <meta property="og:description" content="自立しよう、自分の足で立つと気持ちいい。在宅型サステナ物販スクールRe:cheの公式ガイドです。">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://kumiko0814.github.io/reche-pamphlet/img/hero-sea.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -17,6 +18,7 @@
   --navy:#26405f; --navy-deep:#1d3149;
   --pink:#cf8f9c; --pink-deep:#bd7886;
   --lblue:#7fb0d2; --ink:#4a4446; --line:#dfe7ee;
+  --grad:linear-gradient(90deg,#f3c3d3 0%,#d9c3ea 55%,#b9d5ee 100%);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -28,65 +30,88 @@ body{
 img{max-width:100%; display:block;}
 a{color:var(--pink-deep);}
 .en{font-family:"Cormorant Garamond","Yu Gothic",serif;}
-.wrap{max-width:980px; margin:0 auto; padding:0 22px;}
+.wrap{max-width:1020px; margin:0 auto; padding:0 22px;}
 .mob{display:none;}
 @media(max-width:560px){ .mob{display:inline;} }
 
+/* reveal */
+.rv{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease;}
+.rv.in{opacity:1; transform:none;}
+@media (prefers-reduced-motion: reduce){ .rv{opacity:1; transform:none; transition:none;} }
+
 /* header */
-header{position:sticky; top:0; z-index:50; background:rgba(241,247,251,.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
-.hd{display:flex; align-items:center; justify-content:space-between; padding:12px 22px; max-width:980px; margin:0 auto;}
+header{position:sticky; top:0; z-index:50; background:rgba(241,247,251,.9); backdrop-filter:blur(12px); border-bottom:1px solid var(--line);}
+header::after{content:""; display:block; height:3px; background:var(--grad);}
+.hd{display:flex; align-items:center; justify-content:space-between; padding:12px 22px; max-width:1020px; margin:0 auto;}
 .hd .brand{display:flex; flex-direction:column; line-height:1.25;}
 .hd .brand .nm{font-size:21px; font-weight:900; color:var(--navy-deep); letter-spacing:.04em;}
-.hd .brand .sb{font-size:9.5px; letter-spacing:.24em; color:var(--lblue); font-weight:700;}
+.hd .brand .sb{font-size:9.5px; letter-spacing:.22em; color:var(--lblue); font-weight:700;}
 .hd .op{display:flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--line); border-radius:999px; padding:6px 14px;}
 .hd .op span{font-size:10.5px; color:#8a97a5; font-weight:700; letter-spacing:.06em;}
 .hd .op img{height:20px; width:auto;}
 
 /* hero */
-.hero{background:linear-gradient(180deg,#eaf3fa 0%,#f1f7fb 70%); padding:64px 0 30px; position:relative; overflow:hidden;}
-.hero .wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:36px; align-items:center;}
+.hero{position:relative; background:linear-gradient(160deg,#eaf3fa 0%,#f6fafc 45%,#fbeef1 130%); overflow:hidden; padding:70px 0 0;}
+.hero::before{content:""; position:absolute; right:-140px; top:-140px; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle,#fbeef1 0%,rgba(251,238,241,0) 70%);}
+.hero .wrap{display:grid; grid-template-columns:1.02fr .98fr; gap:44px; align-items:center; position:relative;}
 .kicker{display:inline-block; font-size:11px; letter-spacing:.3em; color:var(--pink-deep); font-weight:700; border-bottom:2px solid var(--pink); padding-bottom:6px; margin-bottom:20px;}
-.hero h1{font-size:15px; color:var(--navy); font-weight:700; letter-spacing:.12em; margin-bottom:6px; word-break:auto-phrase;}
-.hero .logo-line{font-size:64px; font-weight:900; color:var(--navy-deep); letter-spacing:.02em; line-height:1.15;}
+.hero h1{font-size:15px; color:var(--navy); font-weight:700; letter-spacing:.12em; margin-bottom:4px; word-break:auto-phrase;}
+.hero .logo-line{font-size:66px; font-weight:900; color:var(--navy-deep); letter-spacing:.02em; line-height:1.12;}
 .hero .logo-line small{font-size:22px; color:var(--pink-deep); font-weight:700; letter-spacing:.08em;}
-.promise{margin-top:18px; font-size:20px; font-weight:700; color:var(--navy); letter-spacing:.06em; word-break:auto-phrase;}
-.promise .en-sub{display:block; font-size:11px; letter-spacing:.26em; color:var(--lblue); margin-top:4px; font-weight:700;}
-.hero p.lead{margin-top:18px; font-size:15px; word-break:auto-phrase;}
-.hero .art{border-radius:24px; overflow:hidden; box-shadow:0 24px 60px rgba(38,64,95,.16); background:#fff;}
-.edition{margin-top:22px; font-size:11.5px; color:#8a97a5; letter-spacing:.06em;}
-.stats{max-width:980px; margin:34px auto 0; padding:0 22px;}
-.stats .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
-.stat{background:#fff; border:1px solid var(--line); border-radius:18px; text-align:center; padding:20px 10px 16px;}
+.promise{margin-top:16px; font-size:21px; font-weight:900; color:var(--navy); letter-spacing:.06em; word-break:auto-phrase;}
+.promise .u{background:linear-gradient(transparent 70%,rgba(207,143,156,.35) 70%);}
+.promise .en-sub{display:block; font-size:11px; letter-spacing:.26em; color:var(--lblue); margin-top:6px; font-weight:700;}
+.hero p.lead{margin-top:16px; font-size:14.5px; word-break:auto-phrase;}
+.edition{margin-top:18px; font-size:11.5px; color:#8a97a5; letter-spacing:.05em;}
+.hero .art{position:relative;}
+.hero .art .sea{border-radius:200px 200px 28px 28px; overflow:hidden; box-shadow:0 30px 70px rgba(38,64,95,.22); border:6px solid #fff;}
+.hero .art .badge{position:absolute; left:-16px; bottom:26px; background:#fff; border-radius:16px; box-shadow:0 14px 36px rgba(38,64,95,.18); padding:12px 18px; font-size:12px; font-weight:900; color:var(--navy-deep); line-height:1.7;}
+.hero .art .badge small{display:block; color:var(--pink-deep); font-size:10px; letter-spacing:.14em; font-weight:700;}
+.stats{max-width:1020px; margin:44px auto 0; padding:0 22px 0;}
+.stats .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; transform:translateY(34px);}
+.stat{background:rgba(255,255,255,.94); border:1px solid var(--line); border-radius:18px; text-align:center; padding:20px 10px 16px; box-shadow:0 16px 40px rgba(38,64,95,.10); backdrop-filter:blur(4px);}
 .stat .lb{font-size:11px; color:#8a97a5; font-weight:700; letter-spacing:.08em;}
-.stat .vl{font-size:26px; font-weight:900; color:var(--navy-deep); line-height:1.3; margin-top:4px;}
+.stat .vl{font-size:27px; font-weight:900; color:var(--navy-deep); line-height:1.3; margin-top:4px;}
 .stat .vl small{font-size:12.5px; font-weight:700; color:var(--pink-deep);}
-.stat .nt{font-size:10px; color:#a7b3bf; margin-top:2px;}
-.hero-note{max-width:980px; margin:10px auto 0; padding:0 22px; font-size:10.5px; color:#a7b3bf;}
+.hero-note{max-width:1020px; margin:0 auto; padding:48px 22px 0; font-size:10.5px; color:#a7b3bf;}
 
 /* sections */
-section{padding:72px 0;}
+section{padding:78px 0;}
 section.alt{background:#fff;}
 section.pinkbg{background:var(--pink-bg);}
 section.navybg{background:var(--navy-deep); color:#e8eef5;}
-.sec-head{margin-bottom:38px;}
+.sec-head{margin-bottom:40px;}
 .sec-head .en-ov{font-size:12px; letter-spacing:.3em; color:var(--pink-deep); font-weight:700; display:block; margin-bottom:8px;}
 .navybg .sec-head .en-ov{color:var(--pink);}
-.sec-head h2{font-size:29px; font-weight:900; color:var(--navy-deep); letter-spacing:.05em; line-height:1.6; word-break:auto-phrase;}
+.sec-head h2{font-size:30px; font-weight:900; color:var(--navy-deep); letter-spacing:.05em; line-height:1.6; word-break:auto-phrase;}
 .navybg .sec-head h2{color:#fff;}
 .sec-head h2 .u{background:linear-gradient(transparent 68%,rgba(207,143,156,.35) 68%);}
-.sec-head p.sub{margin-top:12px; font-size:14.5px; word-break:auto-phrase;}
+.sec-head p.sub{margin-top:12px; font-size:14.5px; word-break:auto-phrase; max-width:760px;}
 .navybg .sec-head p.sub{color:#c6d3e2;}
+.hairline{height:3px; background:var(--grad); border-radius:99px; width:76px; margin-top:16px;}
 
 .cards{display:grid; gap:16px;}
 .cards.c2{grid-template-columns:1fr 1fr;}
 .cards.c3{grid-template-columns:repeat(3,1fr);}
 .card{background:#fff; border:1px solid var(--line); border-radius:20px; padding:24px 22px;}
+.pinkbg .card, .pinkbg .voice{border-color:#f2dde2;}
 .card h3{font-size:16.5px; color:var(--navy); font-weight:900; margin-bottom:8px; letter-spacing:.04em; word-break:auto-phrase;}
 .card p{font-size:13.8px; line-height:1.95; word-break:auto-phrase;}
 .card .tag{display:inline-block; font-size:10px; font-weight:900; letter-spacing:.12em; color:#fff; background:linear-gradient(135deg,var(--pink),var(--pink-deep)); border-radius:999px; padding:3px 12px; margin-bottom:10px;}
 .card .tag.bl{background:linear-gradient(135deg,#9cc3de,var(--lblue));}
-.icon{width:40px; height:40px; border-radius:12px; background:var(--blue-bg2); display:flex; align-items:center; justify-content:center; margin-bottom:12px;}
-.icon svg{width:20px; height:20px; stroke:var(--navy); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round;}
+.card .cimg{border-radius:14px; overflow:hidden; margin:12px 0 4px; border:1px solid var(--line);}
+
+/* photo frames */
+.frame{background:#fff; border-radius:22px; padding:12px; box-shadow:0 18px 46px rgba(38,64,95,.13); border:1px solid var(--line);}
+.frame img{border-radius:14px;}
+.frame .cap{font-size:11.5px; color:#8a97a5; font-weight:700; letter-spacing:.06em; padding:10px 6px 2px; text-align:center; word-break:auto-phrase;}
+.tilt-l{transform:rotate(-1.6deg);}
+.tilt-r{transform:rotate(1.4deg);}
+
+.split{display:grid; grid-template-columns:1fr 1fr; gap:34px; align-items:center;}
+.split .txt h3{font-size:21px; font-weight:900; color:var(--navy-deep); line-height:1.8; margin-bottom:10px; word-break:auto-phrase;}
+.split .txt h3 .u{background:linear-gradient(transparent 68%,rgba(207,143,156,.35) 68%);}
+.split .txt p{font-size:14px; word-break:auto-phrase;}
 
 .tblwrap{overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:18px; border:1px solid var(--line); background:#fff;}
 table{width:100%; border-collapse:collapse; min-width:560px; font-size:13.5px;}
@@ -103,12 +128,9 @@ td.rowlb,th.rowlb{font-weight:900; color:var(--navy); white-space:nowrap; backgr
 .flow .f h4{font-size:15px; color:var(--navy-deep); font-weight:900; margin:8px 0 6px; word-break:auto-phrase;}
 .flow .f p{font-size:12.8px; line-height:1.9; word-break:auto-phrase;}
 
-.voice{background:#fff; border:1px solid var(--line); border-radius:20px; padding:22px 20px;}
-.voice .who{display:flex; align-items:center; gap:10px; margin-bottom:10px;}
-.voice .av{width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--blue-bg2),var(--pink-bg)); display:flex; align-items:center; justify-content:center; font-weight:900; color:var(--pink-deep); font-size:15px;}
-.voice .nm{font-size:13px; font-weight:900; color:var(--navy);}
-.voice .rs{font-size:15.5px; font-weight:900; color:var(--pink-deep); line-height:1.7; margin-bottom:6px; word-break:auto-phrase;}
-.voice p{font-size:12.8px; line-height:1.9; word-break:auto-phrase;}
+.gallery{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:26px;}
+.gallery .wide{grid-column:1/-1;}
+.strip{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px;}
 
 .club{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
 .club .cl{background:#fff; border:1px solid var(--line); border-radius:14px; padding:12px 16px; font-size:13px; font-weight:700; color:var(--navy); display:flex; gap:10px; align-items:baseline; word-break:auto-phrase;}
@@ -119,20 +141,25 @@ td.rowlb,th.rowlb{font-weight:900; color:var(--navy); white-space:nowrap; backgr
 .medlist .m b{color:#fff; display:block; font-size:13.5px;}
 .medlist .m span{color:#9fb2c8; font-size:11.5px;}
 
-.teacher{display:flex; flex-wrap:wrap; gap:10px;}
-.teacher .t{background:#fff; border:1px solid var(--line); border-radius:999px; padding:8px 18px; font-size:13px; font-weight:700; color:var(--navy);}
+.masonry{columns:3; column-gap:14px; margin-top:26px;}
+.masonry .frame{margin:0 0 14px; break-inside:avoid; padding:8px;}
+.masonry .frame img{border-radius:10px;}
 
-.msg{background:#fff; border-radius:24px; border:1px solid var(--line); padding:36px 32px; position:relative;}
+.msg{background:#fff; border-radius:24px; border:1px solid var(--line); padding:0; overflow:hidden; display:grid; grid-template-columns:.9fr 1.1fr;}
+.msg .ph{min-height:100%;}
+.msg .ph img{width:100%; height:100%; object-fit:cover;}
+.msg .bd{padding:36px 32px;}
 .msg .q{font-size:19px; font-weight:900; color:var(--navy-deep); line-height:2; margin-bottom:16px; word-break:auto-phrase;}
 .msg .q .u{background:linear-gradient(transparent 68%,rgba(207,143,156,.35) 68%);}
-.msg p{font-size:14px; margin-bottom:12px; word-break:auto-phrase;}
+.msg p{font-size:13.8px; margin-bottom:12px; word-break:auto-phrase;}
 .msg .sign{text-align:right; font-size:13px; font-weight:900; color:var(--navy); margin-top:18px;}
 .msg .sign small{display:block; font-weight:700; color:#8a97a5; font-size:11px; letter-spacing:.08em;}
 
-.cta{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%); border-radius:26px; padding:44px 34px; text-align:center; color:#fff;}
-.cta h3{font-size:22px; font-weight:900; letter-spacing:.06em; line-height:1.8; word-break:auto-phrase;}
-.cta p{font-size:13.5px; color:#c6d3e2; margin-top:10px; word-break:auto-phrase;}
-.cta .btns{display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap;}
+.cta{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%); border-radius:26px; padding:46px 34px; text-align:center; color:#fff; position:relative; overflow:hidden;}
+.cta::before{content:""; position:absolute; inset:auto -60px -120px auto; width:280px; height:280px; border-radius:50%; background:radial-gradient(circle,rgba(207,143,156,.35),transparent 70%);}
+.cta h3{font-size:22px; font-weight:900; letter-spacing:.06em; line-height:1.8; word-break:auto-phrase; position:relative;}
+.cta p{font-size:13.5px; color:#c6d3e2; margin-top:10px; word-break:auto-phrase; position:relative;}
+.cta .btns{display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap; position:relative;}
 .cta a.bt{display:inline-block; text-decoration:none; font-weight:900; font-size:14px; border-radius:999px; padding:14px 32px; letter-spacing:.04em;}
 .cta a.p{background:linear-gradient(135deg,var(--pink),var(--pink-deep)); color:#fff;}
 .cta a.w{background:#fff; color:var(--navy-deep);}
@@ -150,19 +177,30 @@ footer a{color:#c6d3e2;}
 .smallnote{font-size:10.5px; color:#a7b3bf; margin-top:14px; line-height:1.8;}
 .navybg .smallnote{color:#8195ac;}
 
-@media(max-width:860px){
+@media(max-width:880px){
+  .hero{padding-top:52px;}
   .hero .wrap{grid-template-columns:1fr;}
   .hero .logo-line{font-size:46px;}
-  .stats .grid{grid-template-columns:1fr 1fr;}
+  .hero .art .sea{border-radius:120px 120px 22px 22px;}
+  .stats .grid{grid-template-columns:1fr 1fr; transform:translateY(0); margin-top:30px;}
+  .hero-note{padding-top:14px;}
   .cards.c2,.cards.c3{grid-template-columns:1fr;}
   .flow{grid-template-columns:1fr;}
   .club{grid-template-columns:1fr;}
   .medlist{grid-template-columns:1fr;}
   .links{grid-template-columns:1fr;}
-  section{padding:56px 0;}
+  .split{grid-template-columns:1fr; gap:22px;}
+  .gallery{grid-template-columns:1fr;}
+  .strip{grid-template-columns:1fr;}
+  .masonry{columns:2;}
+  .msg{grid-template-columns:1fr;}
+  .msg .ph img{max-height:340px;}
+  section{padding:58px 0;}
   .sec-head h2{font-size:23px;}
   body{font-size:14.5px;}
+  .tilt-l,.tilt-r{transform:none;}
 }
+@media(max-width:520px){ .masonry{columns:1;} }
 
 /* bug report tool */
 #bugL{position:fixed; left:12px; bottom:16px; z-index:59; background:rgba(255,255,255,.92); border:1px solid var(--line); color:#8a97a5; font-size:10.5px; font-weight:800; border-radius:999px; padding:5px 12px; cursor:pointer; letter-spacing:.04em;}
@@ -198,7 +236,7 @@ footer a{color:#c6d3e2;}
       <h1>在宅型サステナ物販スクール</h1>
       <div class="logo-line">Re:che <small>リッシュ</small></div>
       <div class="promise">
-        自立しよう、<br class="mob">自分の足で立つと気持ちいい
+        <span class="u">自立しよう、</span><br class="mob"><span class="u">自分の足で立つと気持ちいい</span>
         <span class="en-sub en">BRAND PROMISE</span>
       </div>
       <p class="lead">
@@ -208,7 +246,10 @@ footer a{color:#c6d3e2;}
       </p>
       <div class="edition">発行：株式会社Merone｜2026年8月改訂版（2021年8月発行版を全面更新）</div>
     </div>
-    <div class="art"><img src="img/hero.jpg" alt="Re:seller（在宅バイヤー）のイメージイラスト"></div>
+    <div class="art">
+      <div class="sea"><img src="img/hero-sea.jpg" alt="海辺で両手を広げる女性"></div>
+      <div class="badge"><small>SINCE 2016</small>わたしは、昨日の「私」より<br>自由で強い</div>
+    </div>
   </div>
   <div class="stats">
     <div class="grid">
@@ -224,17 +265,25 @@ footer a{color:#c6d3e2;}
 <!-- ABOUT -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head rv">
       <span class="en-ov en">ABOUT RE:CHE</span>
       <h2>「Re:seller」という、<br class="mob"><span class="u">あたらしい働き方</span></h2>
+      <div class="hairline"></div>
       <p class="sub">Re:cheが教えるのは、安く買って高く売るテクニックではありません。廃棄されるはずだった企業の過剰在庫やリユース品に、もう一度価値を吹き込んで社会に届ける「Re:seller（リセラー）」という働き方です。</p>
     </div>
-    <div class="flow">
+    <div class="flow rv">
       <div class="f"><div class="no en">01</div><h4>企業にうれしい</h4><p>アパレルメーカーやリユース企業の「まだきれいなのに行き場のないお品」をお預かりし、廃棄率を下げるお手伝いをします。</p></div>
       <div class="f"><div class="no en">02</div><h4>わたしにうれしい</h4><p>検品済みのお品がおうちに届くので、撮影・出品・発送まで完全在宅。すきま時間で、自分の力で収入をつくれます。</p></div>
       <div class="f"><div class="no en">03</div><h4>社会にうれしい</h4><p>アパレル業界の廃棄問題の解決に貢献。売れば売るほど社会貢献になる、胸を張れるお仕事です。</p></div>
     </div>
-    <div style="margin-top:34px;">
+    <div class="split rv" style="margin-top:44px;">
+      <div class="frame"><img src="img/ill-closet.jpg" alt="家の不用品が、別の人から見たら宝物に見えるイラスト" loading="lazy"><div class="cap">自分にとっては不要でも、別の人から見たら宝物</div></div>
+      <div class="txt">
+        <h3>クローゼットに眠るものが、<br><span class="u">未来を変える「資産」</span>になります</h3>
+        <p>同じものでも、自分にとっては不要だったとしても、別の人から見たら宝物に見えます。Re:cheではまず、おうちの不用品の販売からスタート。多くの受講生さんが、最初の1〜2ヶ月は不用品の販売だけで受講料をカバーしています。</p>
+      </div>
+    </div>
+    <div style="margin-top:44px;" class="rv">
       <div class="tblwrap">
         <table>
           <thead><tr><th style="width:28%"></th><th>一般的な物販</th><th class="hl">Re:che</th></tr></thead>
@@ -250,15 +299,33 @@ footer a{color:#c6d3e2;}
   </div>
 </section>
 
+<!-- こんなのも売れます -->
+<section class="pinkbg">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="en-ov en">SURPRISING SALES</span>
+      <h2>ハーゲンダッツの蓋も、<br class="mob"><span class="u">松ぼっくりも売れる</span>世界</h2>
+      <div class="hairline"></div>
+      <p class="sub">「わたしに売れるものなんてあるのかな」と思っていた方ほど、驚く世界です。アイスの蓋64個が1,680円、松ぼっくり26個が1,600円、玉ねぎの皮が2,000円。視点が変われば、身のまわりのすべてがお品に見えてきます。</p>
+    </div>
+    <div class="gallery">
+      <div class="frame wide tilt-l rv"><img src="img/fun-items1.jpg" alt="ハーゲンダッツの蓋64個1,680円、松ぼっくり26個1,600円、キーホルダー21,000円の販売実例" loading="lazy"><div class="cap">実際に売れたお品たち（ハーゲンダッツの蓋・松ぼっくり・キーホルダー）</div></div>
+      <div class="frame tilt-r rv"><img src="img/fun-items2.jpg" alt="玉ねぎの皮2,000円、ニットワンピース4,799円の販売実例" loading="lazy"><div class="cap">玉ねぎの皮も、着なくなったワンピースも</div></div>
+      <div class="frame rv"><img src="img/surprise-cards.jpg" alt="AirPodsなどが入った大人気サプライズボックスの販売実例" loading="lazy"><div class="cap">大人気サプライズボックス（見込み利益3〜5万円）</div></div>
+    </div>
+  </div>
+</section>
+
 <!-- 仕入れネットワーク -->
 <section>
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head rv">
       <span class="en-ov en">ONLY ONE NETWORK</span>
       <h2>Re:cheにしかない、<br class="mob"><span class="u">8つの仕入れネットワーク</span></h2>
+      <div class="hairline"></div>
       <p class="sub">スクールの価値は「何を教えるか」だけでなく「どこから仕入れられるか」で決まります。Re:cheは企業との直接提携により、他社には真似できない仕入れ環境を整えています。</p>
     </div>
-    <div class="cards c2">
+    <div class="cards c2 rv">
       <div class="card">
         <span class="tag">国内スクール唯一</span>
         <h3>BOOKOFFホールディングスと事業提携</h3>
@@ -290,35 +357,63 @@ footer a{color:#c6d3e2;}
         <p>仕入れは24時間受付のオンラインフォームと、古物市場・現地仕入れ会の2タイプ。おうち中心の方も、実物を見て学びたい方も、自分のペースで選べます。</p>
       </div>
     </div>
+
+    <div class="sec-head rv" style="margin:56px 0 8px;">
+      <h2 style="font-size:22px;">実際のお品を、<span class="u">少しだけお見せします</span></h2>
+    </div>
+    <div class="gallery">
+      <div class="frame wide rv"><img src="img/goods-profit.jpg" alt="利益11,950円・8,510円・49,350円・18,310円のブランド品実例" loading="lazy"><div class="cap">利益額をあげるお品たち（仕入れ280円のネックレスが利益8,510円に）</div></div>
+      <div class="frame rv"><img src="img/goods-apparel.jpg" alt="アパレル仕入れパックの実例（1着280円〜）" loading="lazy"><div class="cap">アパレルパック（1着280円〜・回転率をあげるならこれ）</div></div>
+      <div class="frame rv"><img src="img/goods-brand.jpg" alt="ブランドバッグ・財布の仕入れ実例" loading="lazy"><div class="cap">ブランド品パック（5万円〜）</div></div>
+      <div class="frame rv"><img src="img/goods-brand2.jpg" alt="Tiffany&Co.、CHANEL、GUCCIなど取扱ブランドの実例" loading="lazy"><div class="cap">こんな商品を販売します（Tiffany・CHANEL・GUCCIなど）</div></div>
+      <div class="frame rv"><img src="img/goods-brand3.jpg" alt="FOXEY、FURLA、BURBERRY、COACHなど取扱ブランドの実例" loading="lazy"><div class="cap">FOXEY・FURLA・BURBERRY・COACHなども</div></div>
+      <div class="frame wide rv"><img src="img/sales-proof.jpg" alt="利益4,150円〜10,000円の販売実績スクリーンショット" loading="lazy"><div class="cap">生徒さんの販売実績（リシュコレ仕入れ分）</div></div>
+    </div>
+
+    <div class="sec-head rv" style="margin:56px 0 8px;">
+      <h2 style="font-size:22px;">現地でも、<span class="u">企業と一緒に</span>動いています</h2>
+    </div>
+    <div class="strip">
+      <div class="frame rv"><img src="img/photo-bookoff.jpg" alt="BOOKOFF倉庫視察の様子" loading="lazy"><div class="cap">BOOKOFFホールディングス様 視察</div></div>
+      <div class="frame rv"><img src="img/photo-kobutsu.jpg" alt="古物市場に並ぶCELINEやGUCCIなどのブランド品" loading="lazy"><div class="cap">古物市場（毎月8日・12日）</div></div>
+      <div class="frame rv"><img src="img/photo-shiire.jpg" alt="現地仕入れ会でお品を選ぶ生徒のみなさま" loading="lazy"><div class="cap">現地仕入れ会（不定期開催）</div></div>
+    </div>
   </div>
 </section>
 
 <!-- 学び・サポート -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head rv">
       <span class="en-ov en">LEARNING &amp; SUPPORT</span>
       <h2>期限なし。<br class="mob"><span class="u">無期限サポート</span>で、<br class="mob">できるまで伴走します</h2>
+      <div class="hairline"></div>
       <p class="sub">業界では半年〜1年のサポート期限が一般的ですが、Re:cheのサポートに期限はありません。結婚・出産・お仕事の繁忙期など、女性のライフイベントに合わせて、休んでも戻ってこられる場所です。</p>
     </div>
-    <div class="cards c3">
+    <div class="cards c3 rv">
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
         <h3>会員限定コンテンツサイト</h3>
+        <div class="cimg"><img src="img/site-shot.jpg" alt="会員限定コンテンツサイトの画面" loading="lazy"></div>
         <p>写真の撮り方・文章の書き方・価格のつけ方・梱包・発送、そして外注化まで。仕入れから販売までの全工程を、いつでも動画と資料で学べます。追加料金なしでずっと見放題です。</p>
       </div>
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 2v4M16 2v4"></path></svg></div>
         <h3>月一講座（アーカイブあり）</h3>
+        <div class="cimg"><img src="img/photo-kouza.jpg" alt="月一講座の会場の様子" loading="lazy"></div>
         <p>毎月1回、オンライン（Zoom）と都内オフラインで開催。最新ノウハウの共有、ワークショップ、ゲスト対談など。参加すればするほど売上が伸びて成長できる場所です。</p>
       </div>
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M17 8h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2v4l-4-4H9a2 2 0 0 1-2-2v-1"></path><path d="M13 2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2v4l4-4h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"></path></svg></div>
         <h3>3層のLINEグループ</h3>
-        <p>お知らせが届く「全体グループ」、切磋琢磨できる「同期グループ」、そして生徒1人に講師が複数名つく「個別グループ」。ひとりで悩む時間をつくりません。</p>
+        <p>お知らせが届く「全体グループ」、切磋琢磨できる「同期グループ」、そして生徒1人に講師が複数名つく「個別グループ」。定期の課題と毎週の目標提出で習慣化しながら、ひとりで悩む時間をつくりません。</p>
       </div>
     </div>
-    <div style="margin-top:40px;">
+    <div class="split rv" style="margin-top:44px;">
+      <div class="txt">
+        <h3>「月2万円」から始める、<br><span class="u">未来のための3ステップ</span></h3>
+        <p>ステップ1は、おうちの不用品販売で家計負担ゼロのままコツを掴む期間（1〜2ヶ月目・目標 月2〜3万円）。ステップ2でスターターパックを使い仕入れの基本を覚え（3〜5ヶ月目・目標 月5万円）、ステップ3で月10万円を安定して利益に（6ヶ月目〜）。焦らず、順番に登れる設計です。</p>
+      </div>
+      <div class="frame rv"><img src="img/ill-3step.jpg" alt="家計負担ゼロ期間、プラス収入期、資産構築期の3ステップロードマップ" loading="lazy"><div class="cap">入会後のロードマップ（目標値はスクール標準の目安です）</div></div>
+    </div>
+    <div style="margin-top:44px;" class="rv">
       <div class="sec-head" style="margin-bottom:22px;">
         <h2 style="font-size:21px;">参加は自由。<span class="u">部活感覚</span>で入れる10のグループ</h2>
       </div>
@@ -337,13 +432,15 @@ footer a{color:#c6d3e2;}
 <!-- 講師 -->
 <section>
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head rv">
       <span class="en-ov en">TEACHERS</span>
       <h2>生徒から講師へ。<br class="mob"><span class="u">現役Re:seller</span>の講師陣</h2>
+      <div class="hairline"></div>
       <p class="sub">Re:cheの講師は、全員がRe:cheで成果を出してきた現役のRe:sellerです。「できるようになった人」だからこそ、つまずくポイントに寄り添えます。</p>
     </div>
-    <div class="teacher">
-      <div class="t">小倉可奈未</div><div class="t">本田理恵</div><div class="t">唐沢美由樹</div><div class="t">上田ひかる</div><div class="t">迫みちよ</div><div class="t">南雲和宏</div><div class="t">町田あつこ</div><div class="t">藤北のぞみ</div><div class="t">大庭まゆみ</div><div class="t">神野智尋</div><div class="t">宮島美里</div>
+    <div class="cards c2">
+      <div class="frame rv"><img src="img/teachers1.jpg" alt="講師：迫みちよさん、上田ひかるさん、南雲和宏さん、小倉可奈未さん、本田理恵さん、唐沢美由樹さん" loading="lazy"></div>
+      <div class="frame rv"><img src="img/teachers2.jpg" alt="講師：神野智尋さん、大庭まゆみさん、宮島美里さん、町田あつこさん、藤北のぞみさん" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -351,69 +448,42 @@ footer a{color:#c6d3e2;}
 <!-- 実績 -->
 <section class="pinkbg">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head rv">
       <span class="en-ov en">RESULTS</span>
       <h2>生徒さんの実績<br class="mob">（在籍生62名アンケート）</h2>
+      <div class="hairline"></div>
     </div>
-    <div class="cards c3">
-      <div class="card" style="text-align:center;">
-        <p style="font-size:12px; font-weight:900; color:#8a97a5; letter-spacing:.08em;">初月の利益</p>
-        <p style="font-size:30px; font-weight:900; color:var(--navy-deep); line-height:1.5;">半分以上が<br>平均8万円以上</p>
-      </div>
-      <div class="card" style="text-align:center;">
-        <p style="font-size:12px; font-weight:900; color:#8a97a5; letter-spacing:.08em;">月の平均利益</p>
-        <p style="font-size:30px; font-weight:900; color:var(--navy-deep); line-height:1.5;">70％が<br>10〜20万円以上</p>
-      </div>
-      <div class="card" style="text-align:center;">
-        <p style="font-size:12px; font-weight:900; color:#8a97a5; letter-spacing:.08em;">入会金の回収</p>
-        <p style="font-size:30px; font-weight:900; color:var(--navy-deep); line-height:1.5;">60％が<br>半年以内にペイ</p>
-      </div>
+    <div class="cards c3 rv">
+      <div class="frame"><img src="img/pie-first.jpg" alt="初月の利益の円グラフ：半分以上が初月平均8万円以上" loading="lazy"><div class="cap">初月の利益｜半分以上が平均8万円以上</div></div>
+      <div class="frame"><img src="img/pie-monthly.jpg" alt="月の平均利益の円グラフ：70%が10〜20万円以上" loading="lazy"><div class="cap">月の平均利益｜70％が10〜20万円以上</div></div>
+      <div class="frame"><img src="img/pie-pay.jpg" alt="入会金回収期間の円グラフ：60%が半年以内にペイ" loading="lazy"><div class="cap">入会金の回収｜60％が半年以内にペイ</div></div>
     </div>
-    <div class="cards c3" style="margin-top:16px;">
-      <div class="voice">
-        <div class="who"><div class="av">な</div><div class="nm">なみさん</div></div>
-        <div class="rs">0歳の子育てをしながら利益30万円</div>
-        <p>赤ちゃんのお昼寝時間が、わたしの仕事時間。おうちから一歩も出ずに、家計の柱がひとつ増えました。</p>
-      </div>
-      <div class="voice">
-        <div class="who"><div class="av">ゆ</div><div class="nm">ゆきさん</div></div>
-        <div class="rs">アカウント完全ゼロから初月で利益50万円超</div>
-        <p>メルカリの評価ゼロからのスタート。届いたお品と手順どおりの出品だけで、初月から想像以上の結果に。</p>
-      </div>
-      <div class="voice">
-        <div class="who"><div class="av">り</div><div class="nm">りえさん</div></div>
-        <div class="rs">外注化を学び、初月0円から半年で20万円</div>
-        <p>作業を手放す仕組みまで教われるのがRe:che。今は自分の時間を守りながら収入をつくれています。</p>
-      </div>
-      <div class="voice">
-        <div class="who"><div class="av">ち</div><div class="nm">ちかこさん</div></div>
-        <div class="rs">難病があっても、完全在宅で毎月20万円</div>
-        <p>体調に波があっても、自分のペースでできるのがこの働き方。何より、自分に自信がつきました。</p>
-      </div>
-      <div class="voice">
-        <div class="who"><div class="av">あ</div><div class="nm">あゆみさん</div></div>
-        <div class="rs">妊娠中でも、無理なく月10万円</div>
-        <p>重いものを持たない、外に出ない。妊娠中のわたしでも続けられる範囲で、しっかり収入になりました。</p>
-      </div>
-      <div class="voice">
-        <div class="who"><div class="av">ち</div><div class="nm">ちえこさん</div></div>
-        <div class="rs">利益30万円を達成し、現在はRe:che講師に</div>
-        <p>過去のトラウマを乗り越えて、涙の目標達成。今は同じ悩みを持つ生徒さんを支える側になりました。</p>
-      </div>
+    <div class="sec-head rv" style="margin:48px 0 0;">
+      <h2 style="font-size:22px;">生徒さんから届いた、<span class="u">リアルなご報告</span></h2>
+      <p class="sub">キャンペーン期間中に、生徒さんご本人から講師へ届いたLINEのご報告です（実物）。</p>
+    </div>
+    <div class="masonry">
+      <div class="frame rv"><img src="img/line-1.jpg" alt="売上142,060円・利益112,666円・利益率79.3%の生徒からのLINE報告" loading="lazy"></div>
+      <div class="frame rv"><img src="img/line-4.jpg" alt="売上1,085,042円・利益833,299円・利益率76.8%の生徒からのLINE報告" loading="lazy"></div>
+      <div class="frame rv"><img src="img/line-3.jpg" alt="売上259,667円・利益239,459円・利益率92.2%の生徒からのLINE報告" loading="lazy"></div>
+      <div class="frame rv"><img src="img/line-2.jpg" alt="売上152,273円・利益117,471円・利益率71.1%の生徒からのLINE報告" loading="lazy"></div>
+      <div class="frame rv"><img src="img/line-6.jpg" alt="売上102,638円・利益80,011円・利益率69.5%の生徒からのLINE報告" loading="lazy"></div>
+      <div class="frame rv"><img src="img/line-5.jpg" alt="売上250,053円・利益121,101円・利益率48%の生徒からのLINE報告" loading="lazy"></div>
     </div>
     <p class="smallnote">※在籍生62名への任意アンケートおよびご本人の申告にもとづく実績です。成果を保証するものではありません。</p>
   </div>
 </section>
 
-<!-- インセンティブ -->
+<!-- インセンティブ・キャンペーン -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="en-ov en">INCENTIVE</span>
+    <div class="sec-head rv">
+      <span class="en-ov en">INCENTIVE &amp; CAMPAIGN</span>
       <h2>がんばりに、<span class="u">最大20万円の奨励金</span></h2>
+      <div class="hairline"></div>
       <p class="sub">一定の基準をクリアした生徒さんには、Re:che incentive（奨励金）として最大20万円をキャッシュバック。Re:cheで人生を変えようとする方を支援するため、多くの法人会員様にスポンサーとしてご協力いただいています。</p>
     </div>
-    <div class="tblwrap">
+    <div class="tblwrap rv">
       <table>
         <thead><tr><th>ランク</th><th>期間</th><th>基準</th><th>内容</th></tr></thead>
         <tbody>
@@ -423,18 +493,27 @@ footer a{color:#c6d3e2;}
         </tbody>
       </table>
     </div>
+    <div class="split rv" style="margin-top:36px;">
+      <div class="frame"><img src="img/rookie-rank.jpg" alt="キャンペーンルーキー賞：1位638,098円、2位531,003円、3位325,611円" loading="lazy"><div class="cap">キャンペーン ルーキー賞の実績（利益額）</div></div>
+      <div class="txt">
+        <h3>年3回のキャンペーンで、<br><span class="u">総額100万円分</span>の商品も</h3>
+        <p>年3回開催のキャンペーンでは、上位の方に豪華商品をプレゼント。結果だけでなく、努力の過程も表彰します。入会したばかりの方でも、ルーキー賞で1ヶ月に60万円以上の利益を出した実績があります。</p>
+        <div class="frame" style="margin-top:14px; padding:8px;"><img src="img/campaign-gift.jpg" alt="キャンペーン商品の食事や体験の写真" loading="lazy"><div class="cap">キャンペーン商品の一例</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- 安心の制度 -->
 <section>
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head rv">
       <span class="en-ov en">SAFETY NET</span>
       <h2>「売れなかったら？」まで<br class="mob"><span class="u">設計してあるスクール</span>です</h2>
+      <div class="hairline"></div>
       <p class="sub">物販の一番の不安は「売れ残り」と「わからないこと」。Re:cheは、その両方に制度でお応えします。</p>
     </div>
-    <div class="cards c2">
+    <div class="cards c2 rv">
       <div class="card">
         <span class="tag">NEW</span>
         <h3>買取制度・市場出品制度</h3>
@@ -442,6 +521,7 @@ footer a{color:#c6d3e2;}
       </div>
       <div class="card">
         <h3>税務・法務の無料相談</h3>
+        <div class="cimg"><img src="img/law-visual.jpg" alt="提携弁護士法人のビジュアル" loading="lazy"></div>
         <p>弁護士法人プロテクトスタンス様（第一東京弁護士会所属）と提携。「扶養から外れたらどうしよう」「確定申告はどうするの」といった相談が、通常1回5万円のところRe:che生は無料です（訴訟の場合も3割引でご案内）。</p>
       </div>
       <div class="card">
@@ -458,10 +538,11 @@ footer a{color:#c6d3e2;}
       </div>
       <div class="card">
         <h3>福利厚生・託児サポート</h3>
+        <div class="cimg"><img src="img/esthe.jpg" alt="エステプロラボの優待イメージ" loading="lazy"></div>
         <p>エステプロラボ20％OFF、優待サービス「フクリー」など福利厚生も充実。さらに姉妹サービスの一時預かり託児店舗「ママズスマイル」（東京・高田馬場）を特別価格で利用できます。</p>
       </div>
     </div>
-    <div style="margin-top:34px;">
+    <div style="margin-top:36px;" class="rv">
       <div class="tblwrap">
         <table>
           <thead><tr><th style="width:24%"></th><th class="hl">Re:che</th><th>一般的なスクール</th></tr></thead>
@@ -483,11 +564,11 @@ footer a{color:#c6d3e2;}
 <!-- メディア -->
 <section class="navybg">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head rv">
       <span class="en-ov en">MEDIA &amp; TRUST</span>
       <h2>メディア掲載・社会的評価</h2>
     </div>
-    <div class="medlist">
+    <div class="medlist rv">
       <div class="m"><b>リユース企業100選</b>2021年より毎年選出<span>（リユース経済新聞社）</span></div>
       <div class="m"><b>リユース経済新聞</b>YBA GROUPとの提携を紹介<span>（2024年7月）</span></div>
       <div class="m"><b>anan</b>掲載<span>（2021年5月号）</span></div>
@@ -505,11 +586,12 @@ footer a{color:#c6d3e2;}
 <!-- 運営会社 -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head rv">
       <span class="en-ov en">COMPANY</span>
       <h2>運営会社について</h2>
+      <div class="hairline"></div>
     </div>
-    <div class="cards c2" style="margin-bottom:16px;">
+    <div class="cards c2 rv" style="margin-bottom:16px;">
       <div class="card">
         <img src="img/merone-logo.png" alt="株式会社Merone" style="height:34px; width:auto; margin-bottom:14px;">
         <p>株式会社Meroneは「自身を信じ愛する力を育て、女性の自己実現を創出する」をミッションに、女性支援事業を多岐にわたり展開しています。Re:cheはその創業事業として、女性の社会貢献を創出し、一人ひとりの働き方を支援しています。</p>
@@ -522,11 +604,14 @@ footer a{color:#c6d3e2;}
         <p style="margin-top:8px;"><b style="color:var(--navy);">スクール運営支援</b>｜累計40社を超えるスクール支援の実績があります。</p>
       </div>
     </div>
-    <div class="msg">
-      <div class="q">「何のために収入を増やし、<br class="mob">どう生きていくか。<br><span class="u">誰を幸せにしたいか。</span>」</div>
-      <p>起業して間もない頃、仕事とお金のことだけに専念した結果、体調を崩し、大切な仲間が離れていく経験をしました。だからこそRe:cheは、利益の数字だけを追いかけるスクールにはしないと決めています。</p>
-      <p>結婚や出産などのライフイベントがあっても戻ってこられる無期限サポート。しっかり休むことも大切にする文化。そして、税務や法務、起業のご相談まで、収入をつくった「その後」まで伴走する体制。倫理的で、胸を張れる働き方を、これからも生徒のみなさまと一緒に追求してまいります。</p>
-      <div class="sign">株式会社Merone 代表取締役　森川くみこ<small>MORIKAWA KUMIKO</small></div>
+    <div class="msg rv">
+      <div class="ph"><img src="img/photo-class.jpg" alt="生徒のみなさまと語り合う代表の森川くみこ" loading="lazy"></div>
+      <div class="bd">
+        <div class="q">「何のために収入を増やし、<br class="mob">どう生きていくか。<br><span class="u">誰を幸せにしたいか。</span>」</div>
+        <p>起業して間もない頃、仕事とお金のことだけに専念した結果、体調を崩し、大切な仲間が離れていく経験をしました。だからこそRe:cheは、利益の数字だけを追いかけるスクールにはしないと決めています。</p>
+        <p>結婚や出産などのライフイベントがあっても戻ってこられる無期限サポート。しっかり休むことも大切にする文化。そして、税務や法務、起業のご相談まで、収入をつくった「その後」まで伴走する体制。倫理的で、胸を張れる働き方を、これからも生徒のみなさまと一緒に追求してまいります。</p>
+        <div class="sign">株式会社Merone 代表取締役　森川くみこ<small>MORIKAWA KUMIKO</small></div>
+      </div>
     </div>
   </div>
 </section>
@@ -534,7 +619,7 @@ footer a{color:#c6d3e2;}
 <!-- CTA -->
 <section>
   <div class="wrap">
-    <div class="cta">
+    <div class="cta rv">
       <h3>ご料金・入会時期は、<br class="mob">説明会・個別面談でご案内しています</h3>
       <p>おひとりおひとりの状況に合わせて、最適なスタートの仕方をご提案します。<br class="mob">気になることは、どんな小さなことでもお気軽にご相談ください。</p>
       <div class="btns">
@@ -542,7 +627,7 @@ footer a{color:#c6d3e2;}
         <a class="bt w" href="https://kumiko0814.github.io/reche-interview/">生徒インタビューを読む</a>
       </div>
     </div>
-    <div class="links">
+    <div class="links rv">
       <a href="https://merone.jp" target="_blank" rel="noopener"><b>Merone 公式サイト</b><span>merone.jp｜会社情報・特定商取引法に基づく表記はこちら</span></a>
       <a href="https://kumiko0814.github.io/reche-interview/"><b>Re:che 生徒インタビュー集</b><span>19名のリアルなストーリーを掲載しています</span></a>
     </div>
@@ -587,6 +672,15 @@ document.getElementById("bugS").onclick=function(){
     body:JSON.stringify({member_id:"bug_reche-pamphlet",member_name:"Re:cheパンフレット",mood:"バグ報告",worry:t,want:location.href.slice(0,180)+" ／ "+navigator.userAgent.slice(0,140)})})
     .then(function(){ done(); }).catch(function(){ btn.disabled=false; alert("送信できませんでした。通信環境をご確認ください。"); });
 };
+// scroll reveal
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  },{threshold:.12, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+}else{
+  document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+}
 })();
 </script>
 </body>
