@@ -171,6 +171,46 @@ footer a{color:#d6cdc7;}
 }
 @media(max-width:520px){ .masonry{columns:1;} }
 
+/* PC/SP出し分け・モバイル最適化 */
+.pconly{display:block;}
+.sponly{display:none;}
+.bsec{padding:64px 0;}
+.wcard{background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 12px 30px rgba(38,64,95,.08);}
+.wcard img{display:block; width:100%;}
+.mstack img{display:block; width:100%;}
+.mstack .gap{height:12px;}
+.tgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px 10px; background:#fff; border-radius:18px; padding:20px 14px; box-shadow:0 12px 30px rgba(38,64,95,.08);}
+.tgrid img{width:100%; display:block;}
+.mhero{padding:22px 20px 4px; max-width:560px; margin:0 auto;}
+.mhero .mh-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;}
+.mhero .mh-head .nm{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:21px; font-weight:600; color:#3a3a3a; line-height:1.2;}
+.mhero .mh-head .nm small{font-size:11px; color:var(--rose-deep); font-weight:700; letter-spacing:.08em;}
+.mhero .mh-head .sb{display:block; font-size:7.5px; letter-spacing:.16em; color:#8a97a5; font-weight:700; margin-top:2px;}
+.mhero .op{display:flex; align-items:center; gap:6px; background:#fff; border-radius:999px; padding:7px 13px; box-shadow:0 4px 14px rgba(38,64,95,.10); flex-shrink:0;}
+.mhero .op span{font-size:10px; color:#8a97a5; font-weight:700;}
+.mhero .op img{height:19px; width:auto;}
+.mhero .kick{display:inline-block; font-size:10px; letter-spacing:.26em; color:var(--rose-deep); font-weight:700; border-bottom:1.5px solid var(--rose); padding-bottom:4px; margin-bottom:14px;}
+.mhero h1{font-size:13.5px; color:#4a4446; letter-spacing:.14em; font-weight:700; margin-bottom:2px;}
+.mhero .ttl{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:46px; color:#3a3a3a; font-weight:600; letter-spacing:.02em; line-height:1.15;}
+.mhero .ttl small{font-size:14px; color:var(--rose-deep); letter-spacing:.1em; font-weight:700;}
+.mhero .pr{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:19px; font-weight:700; color:#3a3a3a; line-height:1.9; border-bottom:2px solid var(--rose); display:inline-block; padding-bottom:6px; margin:10px 0 14px;}
+.mhero p.ld{font-size:12.8px; line-height:2.05; color:#5a5456; word-break:auto-phrase; margin-bottom:8px;}
+.mhero .ph{border-radius:18px; overflow:hidden; margin:16px 0 18px; box-shadow:0 14px 34px rgba(38,64,95,.14);}
+.mhero .ph img{width:100%; display:block;}
+@media(max-width:880px){
+  .pconly{display:none;}
+  .sponly{display:block;}
+  section{padding:38px 0;}
+  section.darkbg{padding:44px 0;}
+  .bsec{padding:22px 0;}
+  .sec-head{margin-bottom:22px;}
+  .sec-head p.sub{margin-top:8px;}
+  .club .cl{display:block; padding:12px 16px;}
+  .club .cl span{display:block; margin-bottom:3px;}
+  .club .cl .tx{word-break:keep-all; overflow-wrap:break-word; display:block;}
+  .cta{padding:36px 22px;}
+}
+
 /* bug report tool */
 #bugL{position:fixed; left:12px; bottom:16px; z-index:59; background:rgba(255,255,255,.92); border:1px solid var(--line); color:#9a9089; font-size:10.5px; font-weight:800; border-radius:999px; padding:5px 12px; cursor:pointer; letter-spacing:.04em;}
 #bugM{position:fixed; inset:0; background:rgba(51,46,49,.55); display:none; align-items:center; justify-content:center; z-index:70; padding:24px;}
@@ -188,8 +228,29 @@ footer a{color:#d6cdc7;}
 <body>
 
 <!-- HERO（支給デザイン） -->
-<div class="board top">
+<div class="board top pconly">
   <img src="img/sec-hero.png?v=4" alt="Re:che（リッシュ）在宅型サステナ物販スクール 公式オンラインパンフレット。自立しよう、自分の足で立つと気持ちいい。創立2016年・総生徒数2,700名超（2026年8月現在）・平均作業時間 週3〜6時間">
+</div>
+<div class="mhero sponly">
+  <div class="mh-head">
+    <div><span class="nm">Re:che <small>リッシュ</small></span><span class="sb">ZAITAKU SUSTAINABLE RESELLING SCHOOL</span></div>
+    <div class="op"><span>運営</span><img src="img/merone-logo.png" alt="Merone"></div>
+  </div>
+  <span class="kick en">OFFICIAL ONLINE PAMPHLET</span>
+  <h1>在宅型サステナ物販スクール</h1>
+  <div class="ttl">Re:che <small>リッシュ</small></div>
+  <div class="pr">自立しよう、<br>自分の足で立つと気持ちいい</div>
+  <p class="ld">企業から届く、まだまだきれいなリユース品を、おうちで再販売する。売れる商品を探し回る必要はありません。検品済みのお品が、あなたのもとに届きます。</p>
+  <p class="ld">Re:cheは、女性の精神的・経済的自立を支える国内最大規模の在宅型サステナ物販スクールです。</p>
+  <div class="ph"><img src="img/m-hero-sea.png" alt="海辺で両手を広げる女性。わたしは、昨日の「私」より自由で強い"></div>
+  <div class="stats" style="padding:0; margin:0;">
+    <div class="grid">
+      <div class="stat"><svg viewBox="0 0 24 24"><path d="M5 21V3"></path><path d="M5 4h12l-2.5 3.5L17 11H5"></path></svg><div><span class="lb">創立</span><span class="vl">2016<small> 年</small></span></div></div>
+      <div class="stat"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="16.5" cy="9" r="2.5"></circle><path d="M4 19c0-2.8 2.2-5 5-5s5 2.2 5 5"></path><path d="M14.5 14.5c.6-.3 1.3-.5 2-.5 2.2 0 4 1.8 4 4"></path></svg><div><span class="lb">総生徒数</span><span class="vl">2,700<small> 名超</small></span></div></div>
+      <div class="stat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><div><span class="lb">平均作業時間</span><span class="vl">週3〜6<small> 時間</small></span></div></div>
+    </div>
+  </div>
+  <p class="smallnote" style="text-align:center; margin-top:12px;">発行：株式会社Merone｜2026年8月改訂版<br>※生徒数は2026年8月現在。数値はスクール実績値であり、成果を保証するものではありません。</p>
 </div>
 
 <!-- ABOUT -->
@@ -217,14 +278,14 @@ footer a{color:#d6cdc7;}
 </section>
 
 <!-- 選ばれる理由（支給デザイン） -->
-<section style="padding:64px 0;">
+<section class="bsec">
   <div class="board rv">
     <img src="img/sec-reason.png?v=4" alt="Re:cheが選ばれる理由の比較表。利益率は一般的な物販が10〜30％のところRe:cheは50％以上。扱う商品は検証済みの中古品・一点もの。商品は独占提携の卸から検品済みで届く" loading="lazy">
   </div>
 </section>
 
 <!-- こんなのも売れます（支給デザイン） -->
-<section style="padding:64px 0;">
+<section class="bsec">
   <div class="board rv">
     <img src="img/sec-surprise.png?v=4" alt="ハーゲンダッツの蓋64個が1,680円、松ぼっくり26個が1,600円、玉ねぎの皮が2,000円で売れた実例。あなたの「これ、売れるかも！」を見つけるお手伝いをします" loading="lazy">
   </div>
@@ -242,7 +303,7 @@ footer a{color:#d6cdc7;}
     <div class="cards c2 rv">
       <div class="card">
         <span class="tag">国内スクール唯一</span>
-        <h3>BOOKOFFホールディングスと事業提携</h3>
+        <h3>BOOKOFFホールディングスと<br class="mob">事業提携</h3>
         <p>国内の物販スクールとして唯一、BOOKOFFホールディングス様と正式に事業提携。視察や実績報告など、企業と二人三脚の取り組みを続けています。</p>
       </div>
       <div class="card">
@@ -252,7 +313,7 @@ footer a{color:#d6cdc7;}
       </div>
       <div class="card">
         <span class="tag bl">サステナブル</span>
-        <h3>SMASELL（スマセル）と業務提携</h3>
+        <h3>SMASELL（スマセル）と<br class="mob">業務提携</h3>
         <p>サステナブルアウトレットモールSMASELL様と業務提携し、アパレル業界の廃棄問題解決に共に取り組んでいます。Re:che生専用の割引クーポンもご用意しています。</p>
       </div>
       <div class="card">
@@ -262,7 +323,7 @@ footer a{color:#d6cdc7;}
       </div>
       <div class="card">
         <span class="tag bl">運営セレクト</span>
-        <h3>Re:che Collection（リシュコレ）</h3>
+        <h3>Re:che Collection<br class="mob">（リシュコレ）</h3>
         <p>運営講師がセレクトしたお品を、生徒向けの特別価格で購入できるECサイト。目利きのプロが選んだお品から始められるので、初心者の最初の一歩に最適です。</p>
       </div>
       <div class="card">
@@ -275,7 +336,7 @@ footer a{color:#d6cdc7;}
 </section>
 
 <!-- 利益額をあげるお品たち（支給デザイン） -->
-<section style="padding:64px 0;">
+<section class="bsec">
   <div class="board rv">
     <img src="img/sec-goods.png?v=4" alt="利益額をあげるお品たち。仕入れ280円のネックレスが利益8,510円に。ナイロンバッグ利益11,950円、ブレスレット利益49,350円、ネックレス利益18,310円など" loading="lazy">
   </div>
@@ -291,8 +352,13 @@ footer a{color:#d6cdc7;}
       <div class="hairline"></div>
       <p class="sub">業界では半年〜1年のサポート期限が一般的ですが、Re:cheのサポートに期限はありません。結婚・出産・お仕事の繁忙期など、女性のライフイベントに合わせて、休んでも戻ってこられる場所です。</p>
     </div>
-    <div class="board rv" style="padding:0;">
+    <div class="board rv pconly" style="padding:0;">
       <img src="img/sec-support.png?v=4" alt="会員限定コンテンツサイト・月一講座（アーカイブあり）・3層のLINEグループのご紹介" loading="lazy">
+    </div>
+    <div class="mstack sponly rv">
+      <img src="img/m-support-1.png" alt="会員限定コンテンツサイトのご紹介" loading="lazy"><div class="gap"></div>
+      <img src="img/m-support-2.png" alt="月一講座（アーカイブあり）のご紹介" loading="lazy"><div class="gap"></div>
+      <img src="img/m-support-3.png" alt="3層のLINEグループのご紹介" loading="lazy">
     </div>
     <div class="split rv" style="margin-top:44px;">
       <div class="txt">
@@ -303,24 +369,40 @@ footer a{color:#d6cdc7;}
     </div>
     <div style="margin-top:44px;" class="rv">
       <div class="sec-head" style="margin-bottom:22px;">
-        <h2 style="font-size:21px;">参加は自由。<span class="u">部活感覚</span>で入れるたくさんのグループ</h2>
+        <h2 style="font-size:21px;">参加は自由。<br class="mob"><span class="u">部活感覚</span>で入れる<br class="mob">たくさんのグループ</h2>
       </div>
       <div class="club">
-        <div class="cl"><span>実績づくり</span>月利益10万以上グループ／月利益20万以上グループ</div>
-        <div class="cl"><span>販売テク強化</span>アパレル攻略部屋／ブランド攻略部屋</div>
-        <div class="cl"><span>次のステージへ</span>外注化戦略グループ</div>
-        <div class="cl"><span>自己成長</span>マインドアップグループ／メルカリ寄付グループ</div>
-        <div class="cl"><span>仲間づくり</span>ひとりごと部屋／ママ雑談グループ／男子部／ダイエット部屋</div>
-        <div class="cl"><span>習慣化</span>定期の課題・毎週の目標提出で、続く仕組みに</div>
+        <div class="cl"><span>実績づくり</span><span class="tx">月利益10万以上グループ／<wbr>月利益20万以上グループ</span></div>
+        <div class="cl"><span>販売テク強化</span><span class="tx">アパレル攻略部屋／<wbr>ブランド攻略部屋</span></div>
+        <div class="cl"><span>次のステージへ</span><span class="tx">外注化戦略グループ</span></div>
+        <div class="cl"><span>自己成長</span><span class="tx">マインドアップグループ／<wbr>メルカリ寄付グループ</span></div>
+        <div class="cl"><span>仲間づくり</span><span class="tx">ひとりごと部屋／<wbr>ママ雑談グループ／<wbr>男子部／<wbr>ダイエット部屋</span></div>
+        <div class="cl"><span>習慣化</span><span class="tx">定期の課題・毎週の目標提出で、<wbr>続く仕組みに</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 講師（支給デザイン） -->
-<section style="padding:64px 0;">
-  <div class="board rv">
+<section class="bsec">
+  <div class="board rv pconly">
     <img src="img/sec-teachers.png?v=4" alt="生徒から講師へ。現役Re:sellerの講師陣：迫みちよさん、上田ひかるさん、南雲和宏さん、神野智尋さん、大庭まゆみさん、宮島美里さん、小倉可奈未さん、本田理恵さん、唐沢美由樹さん、町田あつこさん、藤北のぞみさん" loading="lazy">
+  </div>
+  <div class="wrap sponly rv">
+    <img src="img/m-teachers-head.png" alt="生徒から講師へ。現役Re:sellerの講師陣" loading="lazy" style="margin-bottom:12px;">
+    <div class="tgrid">
+      <img src="img/t-sako.png" alt="講師 迫みちよさん" loading="lazy">
+      <img src="img/t-ueda.png" alt="講師 上田ひかるさん" loading="lazy">
+      <img src="img/t-nagumo.png" alt="講師 南雲和宏さん" loading="lazy">
+      <img src="img/t-kanno.png" alt="講師 神野智尋さん" loading="lazy">
+      <img src="img/t-oba.png" alt="講師 大庭まゆみさん" loading="lazy">
+      <img src="img/t-miyajima.png" alt="講師 宮島美里さん" loading="lazy">
+      <img src="img/t-ogura.png" alt="講師 小倉可奈未さん" loading="lazy">
+      <img src="img/t-honda.png" alt="講師 本田理恵さん" loading="lazy">
+      <img src="img/t-karasawa.png" alt="講師 唐沢美由樹さん" loading="lazy">
+      <img src="img/t-machida.png" alt="講師 町田あつこさん" loading="lazy">
+      <img src="img/t-fujikita.png" alt="講師 藤北のぞみさん" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -333,11 +415,22 @@ footer a{color:#d6cdc7;}
       <div class="hairline"></div>
     </div>
   </div>
-  <div class="board rv">
+  <div class="board rv pconly">
     <img src="img/sec-results.png?v=4" alt="在籍生62名アンケートの円グラフ3種：初月の利益は半分以上が平均8万円以上、月の平均利益は70%が10〜20万円以上、入会金の回収は60%が半年以内にペイ" loading="lazy">
   </div>
-  <div class="board rv" style="margin-top:26px;">
+  <div class="wrap mstack sponly rv">
+    <img src="img/m-results-1.png" alt="初月の利益：半分以上が初月平均8万円以上" loading="lazy"><div class="gap"></div>
+    <img src="img/m-results-2.png" alt="月の平均利益：70%が10〜20万円以上" loading="lazy"><div class="gap"></div>
+    <img src="img/m-results-3.png" alt="入会金の回収：60%が半年以内にペイ" loading="lazy">
+  </div>
+  <div class="board rv pconly" style="margin-top:26px;">
     <img src="img/sec-line.png?v=4" alt="生徒さんから届いたリアルなご報告。キャンペーン期間中に生徒さんご本人から講師へ届いたLINEの実物" loading="lazy">
+  </div>
+  <div class="wrap mstack sponly rv" style="margin-top:26px;">
+    <img src="img/m-line-head.png" alt="生徒さんから届いた、リアルなご報告" loading="lazy"><div class="gap"></div>
+    <img src="img/m-line-1.png" alt="生徒さんからのLINE報告（売上449,778円・利益率70%など）" loading="lazy"><div class="gap"></div>
+    <img src="img/m-line-2.png" alt="生徒さんからのLINE報告（売上238,145円・最終売上591,099円など）" loading="lazy"><div class="gap"></div>
+    <img src="img/m-line-3.png" alt="生徒さんからのLINE報告（キャンペーン期間合計 売上1,414,570円・利益率77.5%など）" loading="lazy">
   </div>
   <div class="wrap">
     <p class="smallnote">※在籍生62名への任意アンケートおよびご本人の申告にもとづく実績です。成果を保証するものではありません。</p>
@@ -349,7 +442,7 @@ footer a{color:#d6cdc7;}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="en-ov en">INCENTIVE &amp; CAMPAIGN</span>
-      <h2>がんばりに、<span class="u">最大20万円の奨励金</span></h2>
+      <h2>がんばりに、<br class="mob"><span class="u">最大20万円の奨励金</span></h2>
       <div class="hairline"></div>
       <p class="sub">一定の基準をクリアした生徒さんには、Re:che incentive（奨励金）として最大20万円をキャッシュバック。Re:cheで人生を変えようとする方を支援するため、多くの法人会員様にスポンサーとしてご協力いただいています。</p>
     </div>
@@ -364,8 +457,13 @@ footer a{color:#d6cdc7;}
       </table>
     </div>
   </div>
-  <div class="board rv" style="margin-top:36px;">
+  <div class="board rv pconly" style="margin-top:36px;">
     <img src="img/sec-campaign.png?v=4" alt="年3回のキャンペーンで総額100万円分の商品も。ルーキー賞の実績：1位638,098円、2位531,003円、3位325,611円。キャンペーン商品の一例" loading="lazy">
+  </div>
+  <div class="wrap mstack sponly rv" style="margin-top:26px;">
+    <img src="img/m-camp-head.png" alt="年3回のキャンペーンで、総額100万円分の商品も" loading="lazy"><div class="gap"></div>
+    <img src="img/m-camp-rookie.png" alt="キャンペーン ルーキー賞の実績：1位638,098円、2位531,003円、3位325,611円" loading="lazy"><div class="gap"></div>
+    <img src="img/m-camp-photos.png" alt="キャンペーン商品の一例（お食事・体験）" loading="lazy">
   </div>
 </section>
 
