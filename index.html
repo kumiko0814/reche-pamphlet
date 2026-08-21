@@ -14,11 +14,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#faf8f5; --bg2:#f4efe9; --pink-bg:#f8efee;
-  --ink:#4a4446; --charcoal:#3f393c; --charcoal-deep:#332e31;
+  --bg:#eef3f8; --bg2:#e4edf5; --pink-bg:#fbeef1;
+  --ink:#4a4446; --charcoal:#26405f; --charcoal-deep:#1d3149;
   --rose:#c08c98; --rose-deep:#a86673;
-  --taupe:#b3a396; --line:#e7e0d8;
-  --grad:linear-gradient(90deg,#e9c7d1 0%,#e6d6c9 55%,#dccaba 100%);
+  --taupe:#8fb3cf; --line:#dbe4ed;
+  --grad:linear-gradient(90deg,#e9c7d1 0%,#dcd0e6 55%,#bcd5ea 100%);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -68,7 +68,7 @@ section.darkbg{background:var(--charcoal-deep); color:#efe9e4;}
 .card h3{font-family:"Shippori Mincho","Yu Mincho",serif; font-size:17px; color:var(--charcoal); font-weight:700; margin-bottom:8px; letter-spacing:.04em; word-break:auto-phrase;}
 .card p{font-size:13.8px; line-height:1.95; word-break:auto-phrase;}
 .card .tag{display:inline-block; font-size:10px; font-weight:900; letter-spacing:.12em; color:#fff; background:linear-gradient(135deg,var(--rose),var(--rose-deep)); border-radius:999px; padding:3px 12px; margin-bottom:10px;}
-.card .tag.bl{background:linear-gradient(135deg,#c9bbae,var(--taupe));}
+.card .tag.bl{background:linear-gradient(135deg,#a9c8de,var(--taupe));}
 .card .cimg{border-radius:14px; overflow:hidden; margin:12px 0 4px; border:1px solid var(--line);}
 
 /* photo frames */
@@ -181,7 +181,7 @@ footer a{color:#d6cdc7;}
 
 <!-- HERO（支給デザイン） -->
 <div class="board top">
-  <img src="img/sec-hero.png" alt="Re:che（リッシュ）在宅型サステナ物販スクール 公式オンラインパンフレット。自立しよう、自分の足で立つと気持ちいい。創立2016年・総生徒数2,200名超・生徒の平均利益 月12.8万円・平均作業時間 週3〜6時間">
+  <img src="img/sec-hero.png" alt="Re:che（リッシュ）在宅型サステナ物販スクール 公式オンラインパンフレット。自立しよう、自分の足で立つと気持ちいい。創立2016年・総生徒数2,200名超・生徒の平均利益 月12.8万円・平均作業時間 週3〜6時間。BOOKOFFホールディングス様視察・古物市場・現地仕入れ会の写真つき">
 </div>
 <div class="wrap"><p class="smallnote" style="text-align:right;">発行：株式会社Merone｜2026年8月改訂版　※数値はスクール実績値です。成果を保証するものではありません。</p></div>
 
@@ -210,7 +210,7 @@ footer a{color:#d6cdc7;}
 </section>
 
 <!-- 選ばれる理由（支給デザイン） -->
-<section style="padding:64px 0;">
+<section class="alt" style="padding:64px 0;">
   <div class="board rv">
     <img src="img/sec-reason.png" alt="Re:cheが選ばれる理由の比較表。利益率は一般的な物販が10〜30％のところRe:cheは50％以上。扱う商品は検証済みの中古品・一点もの。商品は独占提携の卸から検品済みで届く" loading="lazy">
   </div>
@@ -265,13 +265,15 @@ footer a{color:#d6cdc7;}
       </div>
     </div>
   </div>
+</section>
 
-  <!-- 利益額をあげるお品たち（支給デザイン） -->
-  <div class="board rv" style="margin-top:56px;">
+<!-- 利益額をあげるお品たち（支給デザイン） -->
+<section class="alt" style="padding:64px 0;">
+  <div class="board rv">
     <img src="img/sec-goods.png" alt="利益額をあげるお品たち。仕入れ280円のネックレスが利益8,510円に。ナイロンバッグ利益11,950円、ブレスレット利益49,350円、ネックレス利益18,310円など" loading="lazy">
   </div>
 
-  <div class="wrap">
+  <div class="wrap" style="margin-top:40px;">
     <div class="gallery">
       <div class="frame rv"><img src="img/goods-apparel.jpg" alt="アパレル仕入れパックの実例（1着280円〜）" loading="lazy"><div class="cap">アパレルパック（1着280円〜・回転率をあげるならこれ）</div></div>
       <div class="frame rv"><img src="img/goods-brand.jpg" alt="ブランドバッグ・財布の仕入れ実例" loading="lazy"><div class="cap">ブランド品パック（5万円〜）</div></div>
@@ -280,14 +282,6 @@ footer a{color:#d6cdc7;}
       <div class="frame wide rv"><img src="img/sales-proof.jpg" alt="利益4,150円〜10,000円の販売実績スクリーンショット" loading="lazy"><div class="cap">生徒さんの販売実績（リシュコレ仕入れ分）</div></div>
     </div>
 
-    <div class="sec-head rv" style="margin:56px 0 8px;">
-      <h2 style="font-size:22px;">現地でも、<span class="u">企業と一緒に</span>動いています</h2>
-    </div>
-    <div class="strip">
-      <div class="frame rv"><img src="img/photo-bookoff.jpg" alt="BOOKOFF倉庫視察の様子" loading="lazy"><div class="cap">BOOKOFFホールディングス様 視察</div></div>
-      <div class="frame rv"><img src="img/photo-kobutsu.jpg" alt="古物市場に並ぶCELINEやGUCCIなどのブランド品" loading="lazy"><div class="cap">古物市場（毎月8日・12日）</div></div>
-      <div class="frame rv"><img src="img/photo-shiire.jpg" alt="現地仕入れ会でお品を選ぶ生徒のみなさま" loading="lazy"><div class="cap">現地仕入れ会（不定期開催）</div></div>
-    </div>
   </div>
 </section>
 
