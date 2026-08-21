@@ -44,6 +44,14 @@ a{color:var(--rose-deep);}
 .board{max-width:1240px; margin:0 auto; padding:0 10px;}
 .board img{width:100%;}
 .board.top{padding-top:14px;}
+.stats{max-width:1240px; margin:16px auto 0; padding:0 10px;}
+.stats .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+.stat{background:#fff; border-radius:18px; padding:20px 14px; box-shadow:0 10px 30px rgba(38,64,95,.08); display:flex; align-items:center; justify-content:center; gap:16px;}
+.stat svg{width:34px; height:34px; stroke:var(--rose-deep); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0;}
+.stat .lb{font-size:12px; color:var(--charcoal); font-weight:700; letter-spacing:.08em; display:block;}
+.stat .vl{font-size:25px; font-weight:900; color:#b95d70; line-height:1.3; display:block;}
+.stat .vl small{font-size:13px; font-weight:700;}
+@media(max-width:880px){ .stats .grid{grid-template-columns:1fr;} }
 
 /* sections */
 section{padding:74px 0;}
@@ -181,9 +189,16 @@ footer a{color:#d6cdc7;}
 
 <!-- HERO（支給デザイン） -->
 <div class="board top">
-  <img src="img/sec-hero.png" alt="Re:che（リッシュ）在宅型サステナ物販スクール 公式オンラインパンフレット。自立しよう、自分の足で立つと気持ちいい。創立2016年・総生徒数2,200名超・生徒の平均利益 月12.8万円・平均作業時間 週3〜6時間。BOOKOFFホールディングス様視察・古物市場・現地仕入れ会の写真つき">
+  <img src="img/sec-hero.png" alt="Re:che（リッシュ）在宅型サステナ物販スクール 公式オンラインパンフレット。自立しよう、自分の足で立つと気持ちいい">
 </div>
-<div class="wrap"><p class="smallnote" style="text-align:right;">発行：株式会社Merone｜2026年8月改訂版　※数値はスクール実績値です。成果を保証するものではありません。</p></div>
+<div class="stats">
+  <div class="grid">
+    <div class="stat"><svg viewBox="0 0 24 24"><path d="M5 21V3"></path><path d="M5 4h12l-2.5 3.5L17 11H5"></path></svg><div><span class="lb">創立</span><span class="vl">2016<small> 年</small></span></div></div>
+    <div class="stat"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="16.5" cy="9" r="2.5"></circle><path d="M4 19c0-2.8 2.2-5 5-5s5 2.2 5 5"></path><path d="M14.5 14.5c.6-.3 1.3-.5 2-.5 2.2 0 4 1.8 4 4"></path></svg><div><span class="lb">総生徒数</span><span class="vl">2,700<small> 名超</small></span></div></div>
+    <div class="stat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><div><span class="lb">平均作業時間</span><span class="vl">週3〜6<small> 時間</small></span></div></div>
+  </div>
+</div>
+<div class="wrap"><p class="smallnote" style="text-align:right;">発行：株式会社Merone｜2026年8月改訂版　※生徒数は2026年8月現在。数値はスクール実績値であり、成果を保証するものではありません。</p></div>
 
 <!-- ABOUT -->
 <section class="alt" style="margin-top:44px;">
@@ -200,10 +215,10 @@ footer a{color:#d6cdc7;}
       <div class="f"><div class="no">03</div><h4>社会にうれしい</h4><p>アパレル業界の廃棄問題の解決に貢献。売れば売るほど社会貢献になる、胸を張れるお仕事です。</p></div>
     </div>
     <div class="split rv" style="margin-top:44px;">
-      <div class="frame"><img src="img/ill-closet.jpg" alt="家の不用品が、別の人から見たら宝物に見えるイラスト" loading="lazy"><div class="cap">自分にとっては不要でも、別の人から見たら宝物</div></div>
+      <div class="frame"><img src="img/ill-closet.jpg" alt="家の不要品が、別の人から見たら宝物に見えるイラスト" loading="lazy"><div class="cap">自分にとっては不要でも、別の人から見たら宝物</div></div>
       <div class="txt">
         <h3>クローゼットに眠るものが、<br><span class="u">未来を変える「資産」</span>になります</h3>
-        <p>同じものでも、自分にとっては不要だったとしても、別の人から見たら宝物に見えます。Re:cheではまず、おうちの不用品の販売からスタート。多くの受講生さんが、最初の1〜2ヶ月は不用品の販売だけで受講料をカバーしています。</p>
+        <p>同じものでも、自分にとっては不要だったとしても、別の人から見たら宝物に見えます。Re:cheではまず、おうちの不要品の販売からスタートします。</p>
       </div>
     </div>
   </div>
@@ -228,7 +243,7 @@ footer a{color:#d6cdc7;}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="en-ov en">ONLY ONE NETWORK</span>
-      <h2>Re:cheにしかない、<br class="mob"><span class="u">8つの仕入れネットワーク</span></h2>
+      <h2>Re:cheにしかない、<br class="mob"><span class="u">仕入れネットワーク</span></h2>
       <div class="hairline"></div>
       <p class="sub">スクールの価値は「何を教えるか」だけでなく「どこから仕入れられるか」で決まります。Re:cheは企業との直接提携により、他社には真似できない仕入れ環境を整えています。</p>
     </div>
@@ -236,7 +251,7 @@ footer a{color:#d6cdc7;}
       <div class="card">
         <span class="tag">国内スクール唯一</span>
         <h3>BOOKOFFホールディングスと事業提携</h3>
-        <p>国内の物販スクールとして唯一、BOOKOFFホールディングス様と正式に事業提携。視察や実績報告など、企業と二人三脚の取り組みを続けています。運営会社Meroneは「リユース企業100選」に2021年より毎年選出されています。</p>
+        <p>国内の物販スクールとして唯一、BOOKOFFホールディングス様と正式に事業提携。視察や実績報告など、企業と二人三脚の取り組みを続けています。</p>
       </div>
       <div class="card">
         <span class="tag">国内スクール唯一</span>
@@ -313,13 +328,13 @@ footer a{color:#d6cdc7;}
     <div class="split rv" style="margin-top:44px;">
       <div class="txt">
         <h3>「月2万円」から始める、<br><span class="u">未来のための3ステップ</span></h3>
-        <p>ステップ1は、おうちの不用品販売で家計負担ゼロのままコツを掴む期間（1〜2ヶ月目・目標 月2〜3万円）。ステップ2でスターターパックを使い仕入れの基本を覚え（3〜5ヶ月目・目標 月5万円）、ステップ3で月10万円を安定して利益に（6ヶ月目〜）。焦らず、順番に登れる設計です。</p>
+        <p>ステップ1は、おうちの不要品販売で家計負担ゼロのままコツを掴む期間（1〜2ヶ月目・目標 月2〜3万円）。ステップ2でスターターパックを使い仕入れの基本を覚え（3〜5ヶ月目・目標 月5万円）、ステップ3で月10万円を安定して利益に（6ヶ月目〜）。焦らず、順番に登れる設計です。</p>
       </div>
       <div class="frame rv"><img src="img/ill-3step.jpg" alt="家計負担ゼロ期間、プラス収入期、資産構築期の3ステップロードマップ" loading="lazy"><div class="cap">入会後のロードマップ（目標値はスクール標準の目安です）</div></div>
     </div>
     <div style="margin-top:44px;" class="rv">
       <div class="sec-head" style="margin-bottom:22px;">
-        <h2 style="font-size:21px;">参加は自由。<span class="u">部活感覚</span>で入れる10のグループ</h2>
+        <h2 style="font-size:21px;">参加は自由。<span class="u">部活感覚</span>で入れるたくさんのグループ</h2>
       </div>
       <div class="club">
         <div class="cl"><span>実績づくり</span>月利益10万以上グループ／月利益20万以上グループ</div>
@@ -425,7 +440,7 @@ footer a{color:#d6cdc7;}
       </div>
       <div class="card">
         <h3>税務・法務の無料相談</h3>
-        <p>弁護士法人プロテクトスタンス様（第一東京弁護士会所属）と提携。「扶養から外れたらどうしよう」「確定申告はどうするの」といった相談が、通常1回5万円のところRe:che生は無料です（訴訟の場合も3割引でご案内）。</p>
+        <p>弁護士法人プロテクトスタンス様（第一東京弁護士会所属）と提携。「扶養から外れたらどうしよう」「確定申告はどうするの」など、通常1回数万円するような相談も、Re:che生徒は専用LINEで無料相談が可能です。</p>
       </div>
       <div class="card">
         <h3>適法性への取り組み</h3>
@@ -440,9 +455,8 @@ footer a{color:#d6cdc7;}
         <p>収入をつくるだけでなく、守ることも大切に。ライフプランの見直しや保険・節約について、専門家に無料で相談できます。ご家族の万一や病気など、暮らしの不安にも寄り添います。</p>
       </div>
       <div class="card">
-        <h3>福利厚生・託児サポート</h3>
-        <div class="cimg"><img src="img/esthe.jpg" alt="エステプロラボの優待イメージ" loading="lazy"></div>
-        <p>エステプロラボ20％OFF、優待サービス「フクリー」など福利厚生も充実。さらに姉妹サービスの一時預かり託児店舗「ママズスマイル」（東京・高田馬場）を特別価格で利用できます。</p>
+        <h3>福利厚生</h3>
+        <p>チェーン店舗利用優待サービスや、女性特有の悩みを解消するフェムテックサービスなど、独自の福利厚生を整備。年々増え続ける福利厚生も魅力の1つです。</p>
       </div>
     </div>
     <div style="margin-top:36px;" class="rv">
@@ -451,11 +465,11 @@ footer a{color:#d6cdc7;}
           <thead><tr><th style="width:24%"></th><th class="hl">Re:che</th><th>一般的なスクール</th></tr></thead>
           <tbody>
             <tr><td class="rowlb">サポート期限</td><td class="hl">無期限</td><td>半年〜1年</td></tr>
-            <tr><td class="rowlb">追加料金</td><td class="hl">一切なし</td><td>追加・更新で費用がかかる場合あり</td></tr>
-            <tr><td class="rowlb">仕入れ先</td><td class="hl">提携仕入れ先 合計8つ（検品済み）</td><td>自分でリサーチ・開拓</td></tr>
+            <tr><td class="rowlb">追加料金</td><td class="hl">なし</td><td>追加・更新で費用がかかる場合あり</td></tr>
+            <tr><td class="rowlb">仕入れ先</td><td class="hl">提携仕入れ先（検品済み）</td><td>自分でリサーチ・開拓</td></tr>
             <tr><td class="rowlb">売れ残り</td><td class="hl">買取制度・市場出品制度あり</td><td>自己責任</td></tr>
             <tr><td class="rowlb">適法性</td><td class="hl">リユース検定士の資格あり</td><td>店舗・ネット仕入れは注意が必要</td></tr>
-            <tr><td class="rowlb">その他</td><td class="hl">税務・法務相談無料／ペア参加OK／自動発送倉庫／メルカリShops対応</td><td>—</td></tr>
+            <tr><td class="rowlb">その他</td><td class="hl">税務・法務相談無料／ペア参加OK／メルカリShops対応</td><td>—</td></tr>
           </tbody>
         </table>
       </div>
@@ -472,15 +486,15 @@ footer a{color:#d6cdc7;}
       <h2>メディア掲載・社会的評価</h2>
     </div>
     <div class="medlist rv">
-      <div class="m"><b>リユース企業100選</b>2021年より毎年選出<span>（リユース経済新聞社）</span></div>
+      <div class="m"><b>リユース企業100選</b>2021年より選出<span>（リユース経済新聞社）</span></div>
       <div class="m"><b>リユース経済新聞</b>YBA GROUPとの提携を紹介<span>（2024年7月）</span></div>
       <div class="m"><b>anan</b>掲載<span>（2021年5月号）</span></div>
       <div class="m"><b>経済界</b>掲載<span>（2020年11月号）</span></div>
       <div class="m"><b>PR TIMES</b>ランキング1位・29媒体に掲載<span>（2021年3月）</span></div>
       <div class="m"><b>渋谷スクランブル交差点ビジョン</b>広告放映<span>（2022年10月）</span></div>
       <div class="m"><b>渋谷・新宿駅構内 壁面広告</b>掲出<span>（2023年11月）</span></div>
-      <div class="m"><b>日経X WOMAN</b>代表 森川くみこがアンバサダー就任<span>（2022年〜）</span></div>
-      <div class="m"><b>情報経営イノベーション専門職大学</b>CEO 森川くみこ・COO 清水翔が客員准教授に就任<span>（2024年〜）</span></div>
+      <div class="m"><b>日経X WOMAN</b>代表 森川公美子がアンバサダー就任<span>（2022年〜）</span></div>
+      <div class="m"><b>情報経営イノベーション専門職大学</b>CEO 森川公美子・COO 清水翔が客員准教授に就任<span>（2024年〜）</span></div>
       <div class="m"><b>企業アライアンス</b>BOOKOFFホールディングス／SMASELL／YBA GROUP／ABCash ほか多数</div>
     </div>
   </div>
@@ -497,23 +511,21 @@ footer a{color:#d6cdc7;}
     <div class="cards c2 rv" style="margin-bottom:16px;">
       <div class="card">
         <img src="img/merone-logo.png" alt="株式会社Merone" style="height:34px; width:auto; margin-bottom:14px;">
-        <p>株式会社Meroneは「自身を信じ愛する力を育て、女性の自己実現を創出する」をミッションに、女性支援事業を多岐にわたり展開しています。Re:cheはその創業事業として、女性の社会貢献を創出し、一人ひとりの働き方を支援しています。</p>
-        <p style="margin-top:10px; font-size:12.5px; color:#9a9089;">Mission｜自身を信じ愛する力を育て、女性の自己実現を創出する<br>Vision｜人生の理想を追求する<br>Value｜与える人で在る／素直・誠実・僻まない／行動・思考の基準値を上げる／感謝を忘れない</p>
+        <p>株式会社Meroneは、女性の経済的・精神的自立を目的として、女性支援事業を多岐にわたり展開しています。Re:cheはその創業事業として、女性の社会貢献を創出し、一人ひとりの働き方を支援しています。</p>
       </div>
       <div class="card">
         <h3>グループサービス</h3>
-        <p><b style="color:var(--charcoal);">ママズスマイル</b>｜「託児に理由も罪悪感もいらない」がコンセプトの一時預かり託児店舗（東京・高田馬場）。Re:che生は特別価格で利用できます。</p>
-        <p style="margin-top:8px;"><b style="color:var(--charcoal);">nomama</b>｜社内独自のノウハウを活用したDX人材スクール。どんな場所でも通用する人材への教育を提供しています。</p>
-        <p style="margin-top:8px;"><b style="color:var(--charcoal);">スクール運営支援</b>｜累計40社を超えるスクール支援の実績があります。</p>
+        <p><b style="color:var(--charcoal);">nomama</b>｜社内独自のノウハウを活用したDX人材スクール。どんな場所でも通用する人材への教育を提供しています。</p>
+        <p style="margin-top:8px;"><b style="color:var(--charcoal);">スクール運営支援</b>｜累計45社を超えるスクール支援の実績があります。</p>
       </div>
     </div>
     <div class="msg rv">
-      <div class="ph"><img src="img/photo-class.jpg" alt="生徒のみなさまと語り合う代表の森川くみこ" loading="lazy"></div>
+      <div class="ph"><img src="img/photo-class.jpg" alt="生徒のみなさまと語り合う代表の森川公美子" loading="lazy"></div>
       <div class="bd">
         <div class="q">「何のために収入を増やし、<br class="mob">どう生きていくか。<br><span class="u">誰を幸せにしたいか。</span>」</div>
         <p>起業して間もない頃、仕事とお金のことだけに専念した結果、体調を崩し、大切な仲間が離れていく経験をしました。だからこそRe:cheは、利益の数字だけを追いかけるスクールにはしないと決めています。</p>
         <p>結婚や出産などのライフイベントがあっても戻ってこられる無期限サポート。しっかり休むことも大切にする文化。そして、税務や法務、起業のご相談まで、収入をつくった「その後」まで伴走する体制。倫理的で、胸を張れる働き方を、これからも生徒のみなさまと一緒に追求してまいります。</p>
-        <div class="sign">株式会社Merone 代表取締役　森川くみこ<small>MORIKAWA KUMIKO</small></div>
+        <div class="sign">株式会社Merone 代表取締役　森川公美子<small>MORIKAWA KUMIKO</small></div>
       </div>
     </div>
   </div>
